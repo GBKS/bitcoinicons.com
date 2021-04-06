@@ -1,0 +1,30 @@
+
+$small-width: 640px;
+$large-width: 1024px;
+$huge-width: 1281px;
+
+$primary: #F7931A;
+
+:root {
+	--backRGB: 255, 255, 255;
+	--frontRGB: 0, 0, 0;
+
+	--front-r: 0;
+	--front-g: 0;
+	--front-b: 0;
+
+	--back-r: 255;
+	--back-g: 255;
+	--back-b: 255;
+
+	--back: #ffffff;
+	--front: #000000;
+}
+
+.--theme-dark {
+	--back: #000000;
+	--front: #ffffff;
+	
+	--backRGB: 0, 0, 0;
+	--frontRGB: 255, 255, 255;
+}

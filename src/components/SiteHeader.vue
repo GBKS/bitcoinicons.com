@@ -1,0 +1,80 @@
+<template>
+  <div class="site-header">
+    <h1>Bitcoin icon set</h1>
+    <p>An open-design set of icons made for Bitcoin centric applications.</p>
+    <div class="links">
+      <a
+        v-for="(item, index) in links"
+        :key="index"
+        :href="item.url"
+        target="_blank"
+      >{{ item.name }}</a>
+    </div>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'SiteHeader',
+
+  props: {
+    links: Array
+  }
+}
+</script>
+
+<style lang="scss" scoped>
+
+@import "../scss/variables.scss";
+@import "../scss/mixins.scss";
+@import "../scss/animations.scss";
+
+.site-header {
+  @include r('padding-top', 50, 100);
+  @include r('padding-bottom', 50, 100);
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  h1 {
+    margin: 0;
+    @include r('font-size', 48, 80);
+    line-height: 1.2;
+    letter-spacing: -3px;
+    font-weight: 300;
+    color: var(--front);
+    transition: color 250ms $ease;
+  }
+
+  p {
+    margin: 5px 0 0 0;
+    @include r('font-size', 18, 22);
+    color: rgba(var(--frontRGB), 0.55);
+    transition: color 250ms $ease;
+    line-height: 1.4;
+  }
+
+  .links {
+    @include r('margin-top', 15, 30);
+
+    a {
+      @include r('font-size', 18, 22);
+      color: var(--front);
+      transition: color 250ms $ease;
+      text-decoration: none;
+
+      &:hover {
+        color: $primary;
+      }
+
+      & + a {
+        @include r('margin-left', 15, 30);
+      }
+    }
+  }
+}
+
+</style>
