@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-grid-item" @click="onClick" ref="canvas">
+  <div :class="classObject" @click="onClick" ref="canvas">
     <div class="icon">
       <img
         :src="iconFile"
@@ -19,10 +19,25 @@ export default {
   props: {
     iconId: String,
     iconData: Object,
-    styleOption: String
+    styleOption: String,
+    activeIcon: Object
   },
 
   computed: {
+    classObject() {
+      var c = ['icon-grid-item'];
+
+      if(this.isActive) {
+        c.push('-active');
+      }
+
+      return c.join(' ');
+    },
+
+    isActive() {
+      return this.activeIcon && this.activeIcon.id == this.iconId;
+    },
+
     iconFile() {
       return 'svg/'+this.styleOption+'/'+this.iconId+'.svg';
     }
@@ -30,15 +45,14 @@ export default {
 
   methods: {
     onClick() {
+      if(this.isActive) {
+        this.$emit('select', null);
+      } else {
         var rect = this.$refs.canvas.getBoundingClientRect();
         var x = this.$refs.canvas.offsetLeft;
         var y = this.$refs.canvas.offsetTop;
         var width = rect.width;
         var height = rect.height;
-
-
-      console.log('aaa', this.$refs.canvas.getBoundingClientRect());
-      console.log('offsetTop', this.$refs.canvas.offsetTop, this.$refs.canvas.offsetLeft);
 
         this.$emit('select', {
           id: this.iconId,
@@ -48,6 +62,7 @@ export default {
           width: width,
           height: height
         });
+      }
     }
   }
 }
@@ -69,6 +84,7 @@ export default {
   flex-grow: 1;
   border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
   border-right: 1px solid rgba(var(--frontRGB), 0.07);
+  position: relative;
 
   .icon {
     width: 30px;
@@ -80,6 +96,19 @@ export default {
     color: rgba(var(--frontRGB), 0.55);
     @include r('font-size', 12, 12);
     text-align: center;
+  }
+
+  &.-active {
+    &:after {
+      display: block;
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid var(--front);
+    }
   }
 }
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="icon-overlay" :style="styleObject">
+  <div class="icon-overlay" :style="styleObject" v-if="activeIcon">
     <h6>{{ activeIcon ? activeIcon.data.name : 'blah' }}</h6>
     <div class="style">
       <div class="icon">
