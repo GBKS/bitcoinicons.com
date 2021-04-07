@@ -50,9 +50,9 @@ export default {
 
 .options-bar {
   display: flex;
-  border-top: 1px solid rgba(var(--frontRGB), 0.07);
-  border-left: 1px solid rgba(var(--frontRGB), 0.07);
-  border-right: 1px solid rgba(var(--frontRGB), 0.07);
+  border-top: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+  border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+  border-right: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
 
   @include media-query(small) {
     flex-wrap: wrap;
@@ -61,7 +61,7 @@ export default {
 
 .--theme-dark {
   .options-bar {
-    border-color: rgba(var(--frontRGB), 0.2);
+    // border-color: rgba(var(--frontRGB), 0.2);
   }
 }
 

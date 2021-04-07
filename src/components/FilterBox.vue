@@ -48,7 +48,7 @@ export default {
         width: 100%;
         appearance: none;
         border-width: 0;
-        font-size: 22px;
+        font-size: 18px;
         height: 60px;
         padding: 0 0 0 20px;
         background-color: transparent;
@@ -61,13 +61,13 @@ export default {
 
     @include media-query(small) {
       flex-basis: 100%;
-      border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
+      border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
     }
 }
 
 .--theme-dark {
   .filter-box {
-    border-color: rgba(var(--frontRGB), 0.2);
+    border-color: rgba(var(--frontRGB), var(--borderOpacity));
   }
 }
 

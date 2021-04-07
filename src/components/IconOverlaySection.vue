@@ -76,7 +76,7 @@ export default {
 .icon-overlay-section {
   flex-basis: 45%;
   flex-grow: 1;
-  box-sizing: border-box;
+  // box-sizing: border-box;
   position: relative;
 
   &.fade-enter-active,
@@ -109,26 +109,22 @@ export default {
       }
 
       & + .icon {
-        border-left: 1px solid rgba(var(--frontRGB), 0.07);
+        border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
       }
     }
   }
 
   > .icon {
-    border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
+    border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+
+    img {
+      width: 100%;
+      height: auto;
+    }
   }
 
   & + .icon-overlay-section {
-    &:before {
-      display: block;
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 1px;
-      height: 100%;
-      background-color: rgba(var(--frontRGB), 0.07);
-    }
+    border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
   }
 }
 
@@ -141,13 +137,13 @@ export default {
         }
 
         & + .icon {
-          border-color: rgba(var(--frontRGB), 0.2);
+          // border-color: rgba(var(--frontRGB), 0.2);
         }
       }
     }
 
     > .icon {
-      border-color: rgba(var(--frontRGB), 0.2);
+      // border-color: rgba(var(--frontRGB), 0.2);
 
       img {
         filter: invert(100%);
@@ -155,9 +151,7 @@ export default {
     }
 
     & + .icon-overlay-section {
-      &:before {
-        background-color: rgba(var(--frontRGB), 0.2);
-      }
+      // border-color: rgba(var(--frontRGB), 0.2);
     }
   }
 }
