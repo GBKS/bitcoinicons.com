@@ -1,11 +1,37 @@
 <!DOCTYPE html>
-<html lang="">
+<!--
+ _     _ _            _             _           _             
+| |__ (_) |_ ___ ___ (_)_ __     __| | ___  ___(_) __ _ _ __  
+| '_ \| | __/ __/ _ \| | '_ \   / _` |/ _ \/ __| |/ _` | '_ \ 
+| |_) | | || (_| (_) | | | | | | (_| |  __/\__ \ | (_| | | | |
+|_.__/|_|\__\___\___/|_|_| |_|  \__,_|\___||___/_|\__, |_| |_|
+                                                  |___/                                     
+-->
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
+    <link rel="canonical" href="<%= htmlWebpackPlugin.options.canonical %>" />
     <title><%= htmlWebpackPlugin.options.title %></title>
+    <description><%= htmlWebpackPlugin.options.description %></description>
+    <meta name="description" content="<%= htmlWebpackPlugin.options.description %>" />
+
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="og:locale" content="<%= htmlWebpackPlugin.options.locale %>" />
+    <meta property="og:description" content="<%= htmlWebpackPlugin.options.description %>" />
+    <meta property="og:url" content="<%= htmlWebpackPlugin.options.canonical %>" />
+    <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="og:image" content="<%= htmlWebpackPlugin.options.preview %>" />
+
+    <meta name="twitter:card" content="summary" />
+    <meta property="twitter:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="twitter:image" content="<%= htmlWebpackPlugin.options.preview %>" />
+    <meta name="twitter:site" content="@bitcoin_design" />
   </head>
   <body>
     <noscript>
