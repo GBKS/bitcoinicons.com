@@ -82,8 +82,8 @@ export default {
   min-height: 120px;
   flex-basis: 120px;
   flex-grow: 1;
-  border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
-  border-right: 1px solid rgba(var(--frontRGB), 0.07);
+  border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+  border-right: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
   position: relative;
 
   .icon {
@@ -93,6 +93,8 @@ export default {
 
   p {
     margin: 20px 0 0 0;
+    padding-left: 10px;
+    padding-right: 10px;
     color: rgba(var(--frontRGB), 0.55);
     @include r('font-size', 12, 12);
     text-align: center;
@@ -103,11 +105,11 @@ export default {
       display: block;
       position: absolute;
       content: '';
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      border: 1px solid var(--front);
+      left: -$borderWidth;
+      top: -$borderWidth;
+      right: -$borderWidth;
+      bottom: -$borderWidth;
+      border: $borderWidth solid var(--front);
       pointer-events: none;
     }
   }
@@ -115,10 +117,16 @@ export default {
 
 .--theme-dark {
   .icon-grid-item {
-    border-color: rgba(var(--frontRGB), 0.2);
+    // border-color: rgba(var(--frontRGB), var(--borderOpacity));
 
     .icon {
       filter: invert(100%);
+    }
+
+    &.-active {
+      &:after {
+    
+      }
     }
   }
 }

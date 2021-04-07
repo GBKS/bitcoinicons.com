@@ -72,7 +72,7 @@ export default {
 .icon-overlay-containers {
   display: flex;
   align-items: stretch;
-  border-top: 1px solid rgba(var(--frontRGB), 0.07);
+  border-top: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
 
   &.fade-enter-active,
   &.fade-leave-active {
@@ -156,14 +156,14 @@ export default {
     }
 
     & + .icon {
-      border-left: 1px solid rgba(var(--frontRGB), 0.07);
+      border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
     }
   }
 }
 
 .--theme-dark {
   .icon-overlay-containers {
-    border-color: rgba(var(--frontRGB), 0.2);
+    // border-color: rgba(var(--frontRGB), 0.2);
 
     .icon {
       &.-circle {
@@ -208,7 +208,7 @@ export default {
       }
 
       & + .icon {
-        border-color: rgba(var(--frontRGB), 0.2);
+        // border-color: rgba(var(--frontRGB), 0.2);
       }
     }
   }

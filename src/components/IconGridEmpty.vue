@@ -24,8 +24,8 @@ export default {
   flex-grow: 1;
   display: flex;
   justify-content: center;
-  border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
-  border-right: 1px solid rgba(var(--frontRGB), 0.07);
+  border-bottom: 4px solid rgba(var(--frontRGB), var(--borderOpacity));
+  border-right: 4px solid rgba(var(--frontRGB), var(--borderOpacity));
 
   p {
     margin: 0 0 0 0;
@@ -50,7 +50,7 @@ export default {
 
 .--theme-dark {
   .icon-grid-empty {
-    border-color: rgba(var(--frontRGB), 0.2);
+    border-color: rgba(var(--frontRGB), var(--borderOpacity));
   }
 }
 

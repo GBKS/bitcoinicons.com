@@ -97,7 +97,7 @@ export default {
   background-color: var(--back);
   border-radius: 10px;
   box-shadow: 0 25px 75px -25px rgba(black, 0.35);
-  border: 2px solid rgba(var(--frontRGB), 0.1);
+  border: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
   display: flex;
   flex-wrap: wrap;
   width: 500px;
@@ -152,7 +152,7 @@ export default {
   h6 {
     flex-basis: 100%;
     @include r('font-size', 18, 24);
-    border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
+    border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
     text-align: center;
     margin: 0;
     font-weight: 400;
@@ -162,16 +162,16 @@ export default {
 
   @include media-query(small) {
     flex-basis: 100%;
-    border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
+    border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
   }
 }
 
 .--theme-dark {
   .icon-overlay {
-    border-color: rgba(var(--frontRGB), 0.3);
+    // border-color: rgba(var(--frontRGB), 0.3);
 
     h6 {
-      border-color: rgba(var(--frontRGB), 0.2);
+      // border-color: rgba(var(--frontRGB), 0.2);
     }
   }
 }

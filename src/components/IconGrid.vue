@@ -76,16 +76,18 @@ export default {
 
 <style lang="scss" scoped>
 
+@import "../scss/variables.scss";
+
 .icon-grid {
   display: flex;
   flex-wrap: wrap;
-  border-top: 1px solid rgba(var(--frontRGB), 0.07);
-  border-left: 1px solid rgba(var(--frontRGB), 0.07);
+  border-top: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+  border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
 }
 
 .--theme-dark {
   .icon-grid {
-    border-color: rgba(var(--frontRGB), 0.2);
+    border-color: rgba(var(--frontRGB), var(--borderOpacity));
   }
 }
 

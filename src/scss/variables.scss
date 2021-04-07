@@ -5,6 +5,8 @@ $huge-width: 1281px;
 
 $primary: #F7931A;
 
+$borderWidth: 4px;
+
 :root {
 	--backRGB: 255, 255, 255;
 	--frontRGB: 0, 0, 0;
@@ -19,6 +21,8 @@ $primary: #F7931A;
 
 	--back: #ffffff;
 	--front: #000000;
+
+	--borderOpacity: 0.07;
 }
 
 .--theme-dark {
@@ -27,4 +31,6 @@ $primary: #F7931A;
 	
 	--backRGB: 0, 0, 0;
 	--frontRGB: 255, 255, 255;
+
+	--borderOpacity: 0.14;
 }
