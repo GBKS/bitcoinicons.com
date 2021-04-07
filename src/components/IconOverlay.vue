@@ -1,99 +1,76 @@
 <template>
-  <div class="icon-overlay" :style="styleObject" v-if="activeIcon">
-    <h6>{{ activeIcon ? activeIcon.data.name : 'blah' }}</h6>
-    <div class="style">
-      <div class="icon">
-        <img
-          :src="iconFileFilled"
-          width="250"
-          height="250"
-          :alt="activeIcon.data.name"
-        >
-      </div>
-      <div class="small-icons">
-        <div class="icon">
-          <img
-            :src="iconFileFilled"
-            width="20"
-            height="20"
-            :alt="activeIcon.data.name"
-          >
-        </div>
-        <div class="icon">
-          <img
-            :src="iconFileFilled"
-            width="30"
-            height="30"
-            :alt="activeIcon.data.name"
-          >
-        </div>
-        <div class="icon">
-          <img
-            :src="iconFileFilled"
-            width="40"
-            height="40"
-            :alt="activeIcon.data.name"
-          >
-        </div>
-      </div>
+  <transition name="slide-in-out">
+    <div :class="className" :style="styleObject" v-if="activeIcon">
+      <h6>{{ activeIcon ? activeIcon.data.name : 'blah' }}</h6>
+      <IconOverlaySection
+        styleName="filled"
+        :iconData="activeIcon"
+      />
+      <IconOverlaySection
+        styleName="outline"
+        :iconData="activeIcon"
+      />
     </div>
-    <div class="style">
-      <div class="icon">
-        <img
-          :src="iconFileOutline"
-          width="250"
-          height="250"
-          :alt="activeIcon.data.name"
-        >
-      </div>
-      <div class="small-icons">
-        <div class="icon">
-          <img
-            :src="iconFileOutline"
-            width="20"
-            height="20"
-            :alt="activeIcon.data.name"
-          >
-        </div>
-        <div class="icon">
-          <img
-            :src="iconFileOutline"
-            width="30"
-            height="30"
-            :alt="activeIcon.data.name"
-          >
-        </div>
-        <div class="icon">
-          <img
-            :src="iconFileOutline"
-            width="40"
-            height="40"
-            :alt="activeIcon.data.name"
-          >
-        </div>
-      </div>
-    </div>
-  </div>
+  </transition>
 </template>
 
 <script>
+import IconOverlaySection from '../components/IconOverlaySection.vue'
+
 export default {
   name: 'IconOverlay',
+  
+  components: {
+    IconOverlaySection
+  },
 
   props: {
     activeIcon: Object
   },
 
   computed: {
+    className() {
+      var s = ['icon-overlay'];
+
+      s.push('-' + this.alignment);
+
+      return s.join(' ');
+    },
+
     styleObject() {
       var s = {};
 
       if(this.activeIcon) {
-        s.left = (this.activeIcon.x + this.activeIcon.width / 2) + 'px';
+        switch(this.alignment) {
+          case 'left':
+            s.left = this.activeIcon.x + 'px';
+            break;
+          case 'right':
+            s.left = (this.activeIcon.x + this.activeIcon.width) + 'px';
+            break;
+          default:
+            s.left = (this.activeIcon.x + this.activeIcon.width / 2) + 'px';
+            break;
+        }
+        
         s.top = (this.activeIcon.y + this.activeIcon.height - 5) + 'px';
       }
 
       return s;
+    },
+
+    alignment() {
+      var result = 'center';
+
+      if(this.activeIcon) {
+        if(this.activeIcon.x < 250) {
+          result = 'left';
+        } else if(this.activeIcon.x > window.innerWidth - 250) {
+          result = 'right';
+        }
+      }
+
+      return result;
     },
 
     iconFileFilled() {
@@ -115,83 +92,87 @@ export default {
 @import "../scss/animations.scss";
 
 .icon-overlay {
-    flex-grow: 1;
-    position: absolute;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 25px 75px -25px rgba(black, 0.35);
-    transform: translateX(-50%);
-    display: flex;
-    flex-wrap: wrap;
-    width: 500px;
-    transition: all 500ms $ease;
+  flex-grow: 1;
+  position: absolute;
+  background-color: var(--back);
+  border-radius: 10px;
+  box-shadow: 0 25px 75px -25px rgba(black, 0.35);
+  border: 2px solid rgba(var(--frontRGB), 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  width: 500px;
+  transition: all 500ms $ease;
 
-    h6 {
-      flex-basis: 100%;
-      @include r('font-size', 18, 24);
-      border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
-      text-align: center;
-      margin: 0;
-      font-weight: 400;
-      padding: 15px 20px;
+  &.-left {
+    transform: translate(0, 0);
+  }
+
+  &.-right {
+    transform: translate(-100%, 0);
+  }
+
+  &.-center {
+    transform: translate(-50%, 0);
+  }
+
+  &.slide-in-out-enter-active,
+  &.slide-in-out-leave-active {
+    transition: all 250ms $ease;
+
+    &.-left {
+      transform: translate(0, 0);
     }
 
-    .style {
-      flex-basis: 45%;
-      flex-grow: 1;
-      box-sizing: border-box;
-      position: relative;
-
-      .small-icons {
-        display: flex;
-        align-items: stretch;
-
-        .icon {
-          flex-basis: 30%;
-          flex-grow: 1;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          padding-top: 10px;
-          padding-bottom: 10px;
-
-          img {
-
-          }
-
-          & + .icon {
-            border-left: 1px solid rgba(var(--frontRGB), 0.07);
-          }
-        }
-      }
-
-      > .icon {
-        border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
-      }
-
-      & + .style {
-        &:before {
-          display: block;
-          content: '';
-          position: absolute;
-          left: 0;
-          top: 0;
-          width: 1px;
-          height: 100%;
-          background-color: rgba(var(--frontRGB), 0.07);
-        }
-      }
+    &.-right {
+      transform: translate(-100%, 0);
     }
 
-    @include media-query(small) {
-      flex-basis: 100%;
-      border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
+    &.-center {
+      transform: translate(-50%, 0);
     }
+  }
+
+  &.slide-in-out-enter,
+  &.slide-in-out-leave-to {
+    opacity: 0;
+
+    &.-left {
+      transform: translate(0, 15px);
+    }
+
+    &.-right {
+      transform: translate(-100%, 15px);
+    }
+
+    &.-center {
+      transform: translate(-50%, 15px);
+    }
+  }
+
+  h6 {
+    flex-basis: 100%;
+    @include r('font-size', 18, 24);
+    border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
+    text-align: center;
+    margin: 0;
+    font-weight: 400;
+    padding: 15px 20px;
+    color: var(--front);
+  }
+
+  @include media-query(small) {
+    flex-basis: 100%;
+    border-bottom: 1px solid rgba(var(--frontRGB), 0.07);
+  }
 }
 
 .--theme-dark {
   .icon-overlay {
-    border-color: rgba(var(--frontRGB), 0.2);
+    border-color: rgba(var(--frontRGB), 0.3);
+
+    h6 {
+      border-color: rgba(var(--frontRGB), 0.2);
+    }
   }
 }
 

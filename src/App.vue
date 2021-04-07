@@ -1,25 +1,27 @@
 <template>
   <div id="app" :class="classObject">
-    <SiteHeader
-      :links="links"
-    />
-    <OptionsBar
-      :filterText="filterText"
-      :styleOption="styleOption"
-      :theme="theme"
-      @setFilterText="setFilterText"
-      @setStyleOption="setStyleOption"
-      @setTheme="setTheme"
-    />
-    <IconGrid
-      :iconData="iconData"
-      :filterText="filterText"
-      :styleOption="styleOption"
-      :activeIcon="activeIcon"
-      @setActiveIcon="setActiveIcon"
-    />
-    <IconOverlay :activeIcon="activeIcon" />
-    <SiteFooter />
+    <div class="wrap">    
+      <SiteHeader
+        :links="links"
+      />
+      <OptionsBar
+        :filterText="filterText"
+        :styleOption="styleOption"
+        :theme="theme"
+        @setFilterText="setFilterText"
+        @setStyleOption="setStyleOption"
+        @setTheme="setTheme"
+      />
+      <IconGrid
+        :iconData="iconData"
+        :filterText="filterText"
+        :styleOption="styleOption"
+        :activeIcon="activeIcon"
+        @setActiveIcon="setActiveIcon"
+      />
+      <IconOverlay :activeIcon="activeIcon" />
+      <SiteFooter />
+    </div>
   </div>
 </template>
 
@@ -115,6 +117,15 @@ export default {
   background-color: var(--back);
   transition: background-color 250ms $ease;
   min-height: 100vh;
+
+  > .wrap {
+    max-width: 1536px;
+    padding-left: 10px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 </style>
