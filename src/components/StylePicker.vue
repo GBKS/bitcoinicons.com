@@ -51,8 +51,6 @@ export default {
 @import "../scss/animations.scss";
 
 .style-picker {
-  border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
-
   button {
     appearance: none;
     background: transparent;
@@ -87,6 +85,10 @@ export default {
     button {
       flex-grow: 1;
     }
+  }
+
+  @include media-query(medium-up) {
+    border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
   }
 }
 

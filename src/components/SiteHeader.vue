@@ -1,6 +1,6 @@
 <template>
   <div class="site-header">
-    <h1>Bitcoin icon set</h1>
+    <h1>Bitcoin icons</h1>
     <p>An open-design set of icons made for Bitcoin centric applications.</p>
     <div class="links">
       <a
@@ -51,7 +51,7 @@ export default {
 
   p {
     margin: 5px 0 0 0;
-    @include r('font-size', 18, 22);
+    @include r('font-size', 16, 22);
     color: rgba(var(--frontRGB), 0.55);
     transition: color 250ms $ease;
     line-height: 1.4;
@@ -61,7 +61,7 @@ export default {
     @include r('margin-top', 15, 30);
 
     a {
-      @include r('font-size', 18, 22);
+      @include r('font-size', 16, 22);
       color: var(--front);
       transition: color 250ms $ease;
       text-decoration: none;

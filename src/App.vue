@@ -19,7 +19,12 @@
         :activeIcon="activeIcon"
         @setActiveIcon="setActiveIcon"
       />
-      <IconOverlay :activeIcon="activeIcon" />
+      <IconOverlay
+        :activeIcon="activeIcon"
+        :isMobile="isMobile"
+        :styleOption="styleOption"
+        @close="closeOverlay"
+      />
       <SiteFooter />
     </div>
   </div>
@@ -30,7 +35,7 @@ import SiteHeader from './components/SiteHeader.vue'
 import OptionsBar from './components/OptionsBar.vue'
 import IconGrid from './components/IconGrid.vue'
 import SiteFooter from './components/SiteFooter.vue'
-import IconOverlay from './components/IconOverlay.vue'
+import IconOverlay from './components/IconOverlay/IconOverlay.vue'
 
 import iconData from './data/icons.json'
 
@@ -52,6 +57,7 @@ export default {
       styleOption: 'filled',
       theme: 'light',
       activeIcon: null,
+      isMobile: false,
       links: [
         {
           name: 'Download',
@@ -83,6 +89,12 @@ export default {
     }
   },
 
+  beforeMount() {
+    this.resize()
+
+    window.addEventListener('resize', this.resize.bind(this))
+  },
+
   methods: {
     setStyleOption(value) {
       this.styleOption = value
@@ -98,6 +110,14 @@ export default {
 
     setActiveIcon(value) {
       this.activeIcon = value
+    },
+
+    closeOverlay() {
+      this.setActiveIcon(null);
+    },
+
+    resize() {
+      this.isMobile = window.innerWidth < 768
     }
   }
 }
@@ -119,9 +139,10 @@ export default {
   min-height: 100vh;
 
   > .wrap {
+    width: 100%;
     max-width: 1536px;
     padding-left: 10px;
-    padding-left: 10px;
+    padding-right: 10px;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;

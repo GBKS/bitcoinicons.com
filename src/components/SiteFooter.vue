@@ -5,7 +5,14 @@
     </div>
     <div class="copy">
       <h2>Created by the<br/><b>Bitcoin Design Community</b></h2>
-      <a href="https://bitcoin.design" rel="me" target="_blank">Check it out</a>
+      <a href="https://bitcoin.design" rel="me" target="_blank">
+        Check it out
+        <img
+          src="svg/filled/arrow-right.svg"
+          width="24"
+          height="24"
+          alt="Arrow right"
+        ></a>
     </div>
   </div>
 </template>
@@ -60,7 +67,7 @@ export default {
     }
 
     a {
-        margin: 15px 0 0 0;
+      margin: 15px 0 0 0;
       display: inline-block;
       background-color: var(--front);
       color: var(--back);
@@ -68,6 +75,40 @@ export default {
       line-height: 44px;
       padding: 0 20px;
       font-weight: 600;
+
+      img {
+        filter: invert(100%);
+        vertical-align: middle;
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  @include media-query(small) {
+    flex-direction: column;
+
+    .copy {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      h2 {
+        margin-top: 20px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.--theme-dark {
+  .site-footer {
+    .copy {
+      a {
+        img {
+          filter: none;
+        }
+      }
     }
   }
 }

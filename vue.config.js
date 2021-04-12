@@ -3,11 +3,11 @@ module.exports = {
         config
             .plugin('html')
             .tap(args => {
-                args[0].title = "Bitcoin icon set";
-                args[0].description = "An open-design set of icons made for Bitcoin centric applications.";
+                args[0].title = "Bitcoin icons";
+                args[0].description = "Interface icons for Bitcoin applications, free to use.";
                 args[0].locale = "en_US";
-                args[0].canonical = "https://bitcoinicons.com";
-                args[0].preview = "https://bitcoinicons.com/bitcoin-icon-set.jpg";
+                args[0].canonical = "https://bitcoin-icons.com";
+                args[0].preview = "https://bitcoin-icons.com/bitcoin-icon-set.jpg";
                 return args;
             })
     }

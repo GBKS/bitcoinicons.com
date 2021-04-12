@@ -3,8 +3,8 @@
     <div class="icon">
       <img
         :src="iconFile"
-        width="30"
-        height="30"
+        width="24"
+        height="24"
         :alt="iconData.name"
       >
     </div>
@@ -87,8 +87,8 @@ export default {
   position: relative;
 
   .icon {
-    width: 30px;
-    height: 30px;
+    width: 24px;
+    height: 24px;
   }
 
   p {

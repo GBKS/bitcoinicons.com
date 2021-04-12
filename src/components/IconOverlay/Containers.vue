@@ -65,9 +65,9 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "../scss/variables.scss";
-@import "../scss/mixins.scss";
-@import "../scss/animations.scss";
+@import "@/scss/variables.scss";
+@import "@/scss/mixins.scss";
+@import "@/scss/animations.scss";
 
 .icon-overlay-containers {
   display: flex;
