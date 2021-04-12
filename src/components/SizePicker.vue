@@ -1,48 +1,67 @@
 <template>
-  <div class="theme-picker">
+  <div class="size-picker">
     <button
         v-for="(item, index) in options"
         :key="index"
         :class="item.active ? '-active' : ''"
-        @click="setTheme(item.id)"
+        :title="item.title"
+        @click="setSize(item.id)"
     >{{ item.name }}</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ThemePicker',
+  name: 'SizePicker',
 
   props: {
-    theme: String
+    size: String
   },
 
   computed: {
     options() {
       return [
         {
-          id: 'light',
-          name: 'Light',
-          active: this.theme == 'light'
+          id: 'small',
+          name: 'S',
+          title: 'Small',
+          active: this.size == 'small'
         },
         {
-          id: 'dark',
-          name: 'Dark',
-          active: this.theme == 'dark'
+          id: 'medium',
+          name: 'M',
+          title: 'Medium',
+          active: this.size == 'medium'
+        },
+        {
+          id: 'large',
+          name: 'L',
+          title: 'Large',
+          active: this.size == 'large'
         }
       ]
     }
   },
 
   methods: {
-    setTheme(value) {
+    setSize(value) {
       var newValue = value;
 
-      if(value == this.theme) {
-        newValue = this.theme == 'light' ? 'dark' : 'light';
+      if(value == this.size) {
+        switch(value) {
+          case 'small':
+            newValue = 'medium';
+            break;
+          case 'medium':
+            newValue = 'large';
+            break;
+          case 'large':
+            newValue = 'small';
+            break;
+        }
       }
-      
-      this.$emit('setTheme', newValue);
+
+      this.$emit('setSize', newValue)
     }
   }
 }
@@ -55,7 +74,7 @@ export default {
 @import "../scss/mixins.scss";
 @import "../scss/animations.scss";
 
-.theme-picker {
+.size-picker {
   border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
 
   button {
@@ -86,7 +105,14 @@ export default {
 
     button {
       flex-grow: 1;
-      padding: 0 0 0 5px;
+
+      &:first-child {
+        padding: 0 0 0 5px;
+      }
+
+      &:nth-child(2) {
+        padding: 0 2px 0 2px;
+      }
 
       &:last-child {
         padding: 0 5px 0 0;
@@ -96,10 +122,14 @@ export default {
 
   @include media-query(medium-up) {
     button {
-      padding: 0 5px 0 20px;
+      padding: 0 20px 0 5px;
 
-      &:last-child {
-        padding: 0 20px 0 5px;
+      &:first-child {
+        padding: 0 5px 0 20px;
+      }
+
+      &:nth-child(2) {
+        padding: 0 10px 0 10px;
       }
     }
   }

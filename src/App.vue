@@ -8,15 +8,18 @@
         :filterText="filterText"
         :styleOption="styleOption"
         :theme="theme"
+        :size="size"
         @setFilterText="setFilterText"
         @setStyleOption="setStyleOption"
         @setTheme="setTheme"
+        @setSize="setSize"
       />
       <IconGrid
         :iconData="iconData"
         :filterText="filterText"
         :styleOption="styleOption"
         :activeIcon="activeIcon"
+        :size="size"
         @setActiveIcon="setActiveIcon"
       />
       <IconOverlay
@@ -56,6 +59,7 @@ export default {
       filterText: '',
       styleOption: 'filled',
       theme: 'light',
+      size: 'medium',
       activeIcon: null,
       isMobile: false,
       links: [
@@ -106,6 +110,10 @@ export default {
 
     setTheme(value) {
       this.theme = value
+    },
+
+    setSize(value) {
+      this.size = value
     },
 
     setActiveIcon(value) {

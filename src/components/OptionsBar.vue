@@ -3,6 +3,7 @@
     <FilterBox :filterText="filterText" @setFilterText="setFilterText" />
     <StylePicker :styleOption="styleOption" @setStyleOption="setStyleOption" />
     <ThemePicker :theme="theme" @setTheme="setTheme" />
+    <SizePicker :size="size" @setSize="setSize" />
   </div>
 </template>
 
@@ -10,6 +11,7 @@
 import FilterBox from '../components/FilterBox.vue'
 import StylePicker from '../components/StylePicker.vue'
 import ThemePicker from '../components/ThemePicker.vue'
+import SizePicker from '../components/SizePicker.vue'
 
 export default {
   name: 'OptionsBar',
@@ -17,13 +19,15 @@ export default {
   components: {
     FilterBox,
     StylePicker,
-    ThemePicker
+    ThemePicker,
+    SizePicker
   },
 
   props: {
     filterText: String,
     styleOption: String,
-    theme: String
+    theme: String,
+    size: String
   },
 
   methods: {
@@ -37,6 +41,10 @@ export default {
 
     setTheme(value) {
         this.$emit('setTheme', value)
+    },
+
+    setSize(value) {
+        this.$emit('setSize', value)
     }
   }
 }
