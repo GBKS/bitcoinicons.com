@@ -228,7 +228,8 @@
         "name": "Send",
         "filled": true,
         "svg": true,
-        "png": true
+        "png": true,
+        "outline": true
     },
     "qr-code":
     {
@@ -243,14 +244,16 @@
         "name": "Unmixed",
         "filled": true,
         "svg": true,
-        "png": true
+        "png": true,
+        "outline": true
     },
     "mixed":
     {
         "name": "Mixed",
         "filled": true,
         "svg": true,
-        "png": true
+        "png": true,
+        "outline": true
     },
     "miner":
     {
@@ -377,7 +380,16 @@
         "name": "Bitcoin",
         "filled": true,
         "svg": true,
-        "png": true
+        "png": true,
+        "outline": true
+    },
+    "satoshi-v1":
+    {
+        "name": "Satoshi V1",
+        "filled": true,
+        "svg": true,
+        "png": true,
+        "outline": true
     },
     "visible":
     {
@@ -446,6 +458,14 @@
     "node":
     {
         "name": "Node",
+        "filled": true,
+        "svg": true,
+        "png": true,
+        "outline": true
+    },
+    "node-0 connections":
+    {
+        "name": "Node 0 connections",
         "filled": true,
         "svg": true,
         "png": true,
