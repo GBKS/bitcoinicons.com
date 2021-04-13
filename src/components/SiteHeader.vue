@@ -1,7 +1,7 @@
 <template>
   <div class="site-header">
     <h1>Bitcoin icons</h1>
-    <p>An open-design set of icons made for Bitcoin centric applications.</p>
+    <p>Icons made for Bitcoin applications, free to use.</p>
     <div class="links">
       <a
         v-for="(item, index) in links"
@@ -69,6 +69,7 @@ export default {
 
       &:hover {
         color: $primary;
+        text-decoration: underline;
       }
     }
   }

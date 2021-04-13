@@ -28,6 +28,7 @@
         :styleOption="styleOption"
         @close="closeOverlay"
       />
+      <SiteInfo />
       <SiteFooter />
     </div>
   </div>
@@ -37,6 +38,7 @@
 import SiteHeader from './components/SiteHeader.vue'
 import OptionsBar from './components/OptionsBar.vue'
 import IconGrid from './components/IconGrid.vue'
+import SiteInfo from './components/SiteInfo.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import IconOverlay from './components/IconOverlay/IconOverlay.vue'
 
@@ -49,6 +51,7 @@ export default {
     SiteHeader,
     OptionsBar,
     IconGrid,
+    SiteInfo,
     IconOverlay,
     SiteFooter
   },

@@ -1,0 +1,75 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="56.25" y="81.25" width="187.5" height="137.5" rx="18.75" stroke="white" stroke-width="12.5"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M75 75C61.1929 75 50 86.1929 50 100V200C50 213.807 61.1929 225 75 225H187.5C201.307 225 212.5 213.807 212.5 200V100C212.5 86.1929 201.307 75 187.5 75H75ZM93.75 168.75C104.105 168.75 112.5 160.355 112.5 150C112.5 139.645 104.105 131.25 93.75 131.25C83.3947 131.25 75 139.645 75 150C75 160.355 83.3947 168.75 93.75 168.75Z" fill="white"/>
+<rect x="50" y="75" width="200" height="150" rx="25" stroke="black" stroke-width="2"/>
+<circle cx="100" cy="150" r="18.75" stroke="black" stroke-width="1.25"/>
+<g opacity="0.15">
+<circle cx="75" cy="100" r="25" stroke="black" stroke-width="1.25"/>
+<circle cx="75" cy="200" r="25" stroke="black" stroke-width="1.25"/>
+<circle cx="225" cy="200" r="25" stroke="black" stroke-width="1.25"/>
+<circle cx="225" cy="100" r="25" stroke="black" stroke-width="1.25"/>
+<circle cx="187.5" cy="100" r="25" stroke="black" stroke-width="1.25"/>
+<circle cx="187.5" cy="200" r="25" stroke="black" stroke-width="1.25"/>
+</g>
+<path d="M209.155 212.5L208.614 212.187L208.072 213.125H209.155V212.5ZM209.155 87.5V86.875H208.072L208.614 87.813L209.155 87.5ZM209.155 213.125H225V211.875H209.155V213.125ZM225 213.125C232.249 213.125 238.125 207.249 238.125 200H236.875C236.875 206.558 231.558 211.875 225 211.875V213.125ZM238.125 200V100H236.875V200H238.125ZM238.125 100C238.125 92.7513 232.249 86.875 225 86.875V88.125C231.558 88.125 236.875 93.4416 236.875 100H238.125ZM225 86.875H209.155V88.125H225V86.875ZM208.614 87.813C210.688 91.3976 211.875 95.5592 211.875 100H213.125C213.125 95.3336 211.877 90.9568 209.696 87.187L208.614 87.813ZM211.875 100V200H213.125V100H211.875ZM211.875 200C211.875 204.441 210.688 208.602 208.614 212.187L209.696 212.813C211.877 209.043 213.125 204.666 213.125 200H211.875Z" fill="black"/>
+<g opacity="0.15">
+<rect x="37.5" y="37.5" width="225" height="225" stroke="black"/>
+</g>
+<g opacity="0.15">
+<path d="M150 0V300" stroke="black"/>
+<path d="M100 0V300" stroke="black"/>
+<path d="M200 0V300" stroke="black"/>
+<path d="M0 150H300" stroke="black"/>
+<path d="M0 100H300" stroke="black"/>
+<path d="M0 200H300" stroke="black"/>
+</g>
+<g opacity="0.05">
+<line x1="13" y1="2.18557e-08" x2="13" y2="300" stroke="black"/>
+<line x1="25.5" y1="2.18557e-08" x2="25.5" y2="300" stroke="black"/>
+<line x1="38" y1="2.18557e-08" x2="38" y2="300" stroke="black"/>
+<line x1="50.5" y1="2.18557e-08" x2="50.5" y2="300" stroke="black"/>
+<line x1="63" y1="2.18557e-08" x2="63" y2="300" stroke="black"/>
+<line x1="75.5" y1="2.18557e-08" x2="75.5" y2="300" stroke="black"/>
+<line x1="88" y1="2.18557e-08" x2="88" y2="300" stroke="black"/>
+<line x1="100.5" y1="2.18557e-08" x2="100.5" y2="300" stroke="black"/>
+<line x1="113" y1="2.18557e-08" x2="113" y2="300" stroke="black"/>
+<line x1="125.5" y1="2.18557e-08" x2="125.5" y2="300" stroke="black"/>
+<line x1="138" y1="2.18557e-08" x2="138" y2="300" stroke="black"/>
+<line x1="150.5" y1="2.18557e-08" x2="150.5" y2="300" stroke="black"/>
+<line x1="163" y1="2.18557e-08" x2="163" y2="300" stroke="black"/>
+<line x1="175.5" y1="2.18557e-08" x2="175.5" y2="300" stroke="black"/>
+<line x1="188" y1="2.18557e-08" x2="188" y2="300" stroke="black"/>
+<line x1="200.5" y1="2.18557e-08" x2="200.5" y2="300" stroke="black"/>
+<line x1="213" y1="2.18557e-08" x2="213" y2="300" stroke="black"/>
+<line x1="225.5" y1="2.18557e-08" x2="225.5" y2="300" stroke="black"/>
+<line x1="238" y1="2.18557e-08" x2="238" y2="300" stroke="black"/>
+<line x1="250.5" y1="2.18557e-08" x2="250.5" y2="300" stroke="black"/>
+<line x1="263" y1="2.18557e-08" x2="263" y2="300" stroke="black"/>
+<line x1="275.5" y1="2.18557e-08" x2="275.5" y2="300" stroke="black"/>
+<line x1="288" y1="2.18557e-08" x2="288" y2="300" stroke="black"/>
+<line x1="2.18557e-08" y1="287" x2="300" y2="287" stroke="black"/>
+<line x1="2.18557e-08" y1="274.5" x2="300" y2="274.5" stroke="black"/>
+<line x1="2.18557e-08" y1="262" x2="300" y2="262" stroke="black"/>
+<line x1="2.18557e-08" y1="249.5" x2="300" y2="249.5" stroke="black"/>
+<line x1="2.18557e-08" y1="237" x2="300" y2="237" stroke="black"/>
+<line x1="2.18557e-08" y1="224.5" x2="300" y2="224.5" stroke="black"/>
+<line x1="2.18557e-08" y1="212" x2="300" y2="212" stroke="black"/>
+<line x1="2.18557e-08" y1="199.5" x2="300" y2="199.5" stroke="black"/>
+<line x1="2.18557e-08" y1="187" x2="300" y2="187" stroke="black"/>
+<line x1="2.18557e-08" y1="174.5" x2="300" y2="174.5" stroke="black"/>
+<line x1="2.18557e-08" y1="162" x2="300" y2="162" stroke="black"/>
+<line x1="2.18557e-08" y1="149.5" x2="300" y2="149.5" stroke="black"/>
+<line x1="2.18557e-08" y1="137" x2="300" y2="137" stroke="black"/>
+<line x1="2.18557e-08" y1="124.5" x2="300" y2="124.5" stroke="black"/>
+<line x1="2.18557e-08" y1="112" x2="300" y2="112" stroke="black"/>
+<line x1="2.18557e-08" y1="99.4998" x2="300" y2="99.4998" stroke="black"/>
+<line x1="2.18557e-08" y1="86.9998" x2="300" y2="86.9998" stroke="black"/>
+<line x1="2.18557e-08" y1="74.4998" x2="300" y2="74.4998" stroke="black"/>
+<line x1="2.18557e-08" y1="61.9998" x2="300" y2="61.9998" stroke="black"/>
+<line x1="2.18557e-08" y1="49.4998" x2="300" y2="49.4998" stroke="black"/>
+<line x1="2.18557e-08" y1="36.9998" x2="300" y2="36.9998" stroke="black"/>
+<line x1="2.18557e-08" y1="24.4998" x2="300" y2="24.4998" stroke="black"/>
+<line x1="2.18557e-08" y1="11.9998" x2="300" y2="11.9998" stroke="black"/>
+</g>
+<rect x="0.5" y="0.5" width="299" height="299" stroke="black"/>
+</svg>

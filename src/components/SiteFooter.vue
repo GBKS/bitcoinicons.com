@@ -75,12 +75,22 @@ export default {
       line-height: 44px;
       padding: 0 20px;
       font-weight: 600;
+      transition: all 100ms $ease;
 
       img {
         filter: invert(100%);
         vertical-align: middle;
         display: inline-block;
         margin-left: 10px;
+        transition: all 150ms $ease;
+      }
+
+      &:hover {
+        background-color: $primary;
+
+        img {
+            transform: translateX(5px);
+        }
       }
     }
   }
