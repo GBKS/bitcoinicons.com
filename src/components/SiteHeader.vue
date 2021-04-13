@@ -61,6 +61,7 @@ export default {
     @include r('margin-top', 15, 30);
 
     a {
+      display: inline-block;
       @include r('font-size', 16, 22);
       color: var(--front);
       transition: color 250ms $ease;
@@ -69,9 +70,28 @@ export default {
       &:hover {
         color: $primary;
       }
+    }
+  }
 
-      & + a {
-        @include r('margin-left', 15, 30);
+  @include media-query(small) {
+    .links {
+      display: flex;
+      flex-direction: column;
+      
+      a {
+        & + a {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  @include media-query(medium-up) {
+    .links {
+      a {
+        & + a {
+          margin-left: 30px;
+        }
       }
     }
   }

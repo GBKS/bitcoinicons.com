@@ -63,21 +63,21 @@ export default {
       activeIcon: null,
       isMobile: false,
       links: [
+        // {
+        //   name: 'Download',
+        //   url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
+        // },
         {
-          name: 'Download',
+          name: 'Download on Github',
           url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
         },
         {
-          name: 'Github',
-          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
-        },
-        {
-          name: 'Figma',
+          name: 'Contribute on Figma',
           url: 'https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set'
-        },
-        {
-          name: 'Contribute',
-          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
+        // },
+        // {
+        //   name: 'Contribute',
+        //   url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
         }
       ]
     }
