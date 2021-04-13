@@ -5,7 +5,11 @@
     </div>
     <div class="copy">
       <h2>Created by the<br/><b>Bitcoin Design Community</b></h2>
-      <a href="https://bitcoin.design" rel="me" target="_blank">
+      <a
+        href="https://bitcoin.design"
+        target="_blank"
+        rel="noreferrer noopener"
+      >
         Check it out
         <img
           src="svg/filled/arrow-right.svg"

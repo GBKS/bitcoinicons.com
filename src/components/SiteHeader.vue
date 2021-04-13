@@ -8,6 +8,7 @@
         :key="index"
         :href="item.url"
         target="_blank"
+        rel="noreferrer noopener"
       >{{ item.name }}</a>
     </div>
   </div>

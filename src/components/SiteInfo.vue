@@ -23,7 +23,7 @@
         <figcaption>Example of how the wallet icon fits on the grid.</figcaption>
       </figure>
     </div>
-    <p>This is an open-source & open-design project. It gets better with your feedback and contribution. To take a peek behind the scenes, <a href="https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set" target="_blank">Figma</a> and <a href="https://github.com/BitcoinDesign/Bitcoin-Icons" target="_blank">Github</a> are the best places to start.</p>
+    <p>This is an open-source & open-design project. It gets better with your feedback and contribution. To take a peek behind the scenes, <a href="https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set" target="_blank" rel="noreferrer noopener">Figma</a> and <a href="https://github.com/BitcoinDesign/Bitcoin-Icons" target="_blank" rel="noreferrer noopener">Github</a> are the best places to start.</p>
   </div>
 </template>
 
