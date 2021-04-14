@@ -6,6 +6,7 @@
       :iconId="iconId"
       :iconData="icon"
       :styleOption="styleOption"
+      :size="size"
       :activeIcon="activeIcon"
       @select="setActiveIcon"
     />
@@ -32,6 +33,7 @@ export default {
     iconData: Object,
     filterText: String,
     styleOption: String,
+    size: String,
     activeIcon: Object
   },
 

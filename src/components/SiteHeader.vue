@@ -1,13 +1,14 @@
 <template>
   <div class="site-header">
-    <h1>Bitcoin icon set</h1>
-    <p>An open-design set of icons made for Bitcoin centric applications.</p>
+    <h1>Bitcoin icons</h1>
+    <p>Icons made for Bitcoin applications, free to use.</p>
     <div class="links">
       <a
         v-for="(item, index) in links"
         :key="index"
         :href="item.url"
         target="_blank"
+        rel="noreferrer noopener"
       >{{ item.name }}</a>
     </div>
   </div>
@@ -51,7 +52,7 @@ export default {
 
   p {
     margin: 5px 0 0 0;
-    @include r('font-size', 18, 22);
+    @include r('font-size', 16, 22);
     color: rgba(var(--frontRGB), 0.55);
     transition: color 250ms $ease;
     line-height: 1.4;
@@ -61,17 +62,38 @@ export default {
     @include r('margin-top', 15, 30);
 
     a {
-      @include r('font-size', 18, 22);
+      display: inline-block;
+      @include r('font-size', 16, 22);
       color: var(--front);
       transition: color 250ms $ease;
       text-decoration: none;
 
       &:hover {
         color: $primary;
+        text-decoration: underline;
       }
+    }
+  }
 
-      & + a {
-        @include r('margin-left', 15, 30);
+  @include media-query(small) {
+    .links {
+      display: flex;
+      flex-direction: column;
+      
+      a {
+        & + a {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+
+  @include media-query(medium-up) {
+    .links {
+      a {
+        & + a {
+          margin-left: 30px;
+        }
       }
     }
   }

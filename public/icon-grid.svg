@@ -1,0 +1,25 @@
+<svg width="300" height="300" viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0)">
+<g opacity="0.15">
+<rect x="37.5" y="37.5" width="225" height="225" stroke="black"/>
+<path d="M300 0L0 300" stroke="black"/>
+<path d="M0 0L300 300" stroke="black"/>
+<circle cx="150" cy="150" r="112.5" stroke="black"/>
+<path d="M150 0V300" stroke="black"/>
+<path d="M100 0V300" stroke="black"/>
+<path d="M200 0V300" stroke="black"/>
+<path d="M0 150H300" stroke="black"/>
+<path d="M0 100H300" stroke="black"/>
+<path d="M0 200H300" stroke="black"/>
+</g>
+<rect x="50" y="75" width="200" height="150" rx="25" stroke="black"/>
+<rect x="75" y="50" width="150" height="200" rx="25" stroke="black"/>
+<rect x="62.5" y="62.5" width="175" height="175" rx="25" stroke="black"/>
+</g>
+<rect x="0.5" y="0.5" width="299" height="299" stroke="black"/>
+<defs>
+<clipPath id="clip0">
+<rect width="300" height="300" fill="white"/>
+</clipPath>
+</defs>
+</svg>

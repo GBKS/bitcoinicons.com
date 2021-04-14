@@ -13,24 +13,24 @@
         <div class="icon">
           <img
             :src="iconFile"
-            width="20"
-            height="20"
+            width="16"
+            height="16"
             alt="Small"
           >
         </div>
         <div class="icon">
           <img
             :src="iconFile"
-            width="30"
-            height="30"
+            width="24"
+            height="24"
             alt="Medium"
           >
         </div>
         <div class="icon">
           <img
             :src="iconFile"
-            width="40"
-            height="40"
+            width="32"
+            height="32"
             alt="Big"
           >
         </div>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-import IconOverlayContainers from '../components/IconOverlayContainers.vue'
+import IconOverlayContainers from '@/components/IconOverlay/Containers.vue'
 
 export default {
   name: 'IconOverlaySection',
@@ -69,12 +69,11 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "../scss/variables.scss";
-@import "../scss/mixins.scss";
-@import "../scss/animations.scss";
+@import "@/scss/variables.scss";
+@import "@/scss/mixins.scss";
+@import "@/scss/animations.scss";
 
 .icon-overlay-section {
-  flex-basis: 45%;
   flex-grow: 1;
   // box-sizing: border-box;
   position: relative;
@@ -125,6 +124,15 @@ export default {
 
   & + .icon-overlay-section {
     border-left: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+  }
+
+  @include media-query(small) {
+    flex-basis: 100%;
+    border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+  }
+
+  @include media-query(medium-up) {
+    flex-basis: 45%;
   }
 }
 

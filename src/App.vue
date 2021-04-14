@@ -8,18 +8,27 @@
         :filterText="filterText"
         :styleOption="styleOption"
         :theme="theme"
+        :size="size"
         @setFilterText="setFilterText"
         @setStyleOption="setStyleOption"
         @setTheme="setTheme"
+        @setSize="setSize"
       />
       <IconGrid
         :iconData="iconData"
         :filterText="filterText"
         :styleOption="styleOption"
         :activeIcon="activeIcon"
+        :size="size"
         @setActiveIcon="setActiveIcon"
       />
-      <IconOverlay :activeIcon="activeIcon" />
+      <IconOverlay
+        :activeIcon="activeIcon"
+        :isMobile="isMobile"
+        :styleOption="styleOption"
+        @close="closeOverlay"
+      />
+      <SiteInfo />
       <SiteFooter />
     </div>
   </div>
@@ -29,8 +38,9 @@
 import SiteHeader from './components/SiteHeader.vue'
 import OptionsBar from './components/OptionsBar.vue'
 import IconGrid from './components/IconGrid.vue'
+import SiteInfo from './components/SiteInfo.vue'
 import SiteFooter from './components/SiteFooter.vue'
-import IconOverlay from './components/IconOverlay.vue'
+import IconOverlay from './components/IconOverlay/IconOverlay.vue'
 
 import iconData from './data/icons.json'
 
@@ -41,6 +51,7 @@ export default {
     SiteHeader,
     OptionsBar,
     IconGrid,
+    SiteInfo,
     IconOverlay,
     SiteFooter
   },
@@ -51,23 +62,25 @@ export default {
       filterText: '',
       styleOption: 'filled',
       theme: 'light',
+      size: 'medium',
       activeIcon: null,
+      isMobile: false,
       links: [
+        // {
+        //   name: 'Download',
+        //   url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
+        // },
         {
-          name: 'Download',
+          name: 'Download on Github',
           url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
         },
         {
-          name: 'Github',
-          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
-        },
-        {
-          name: 'Figma',
+          name: 'Contribute on Figma',
           url: 'https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set'
-        },
-        {
-          name: 'Contribute',
-          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
+        // },
+        // {
+        //   name: 'Contribute',
+        //   url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
         }
       ]
     }
@@ -83,6 +96,12 @@ export default {
     }
   },
 
+  beforeMount() {
+    this.resize()
+
+    window.addEventListener('resize', this.resize.bind(this))
+  },
+
   methods: {
     setStyleOption(value) {
       this.styleOption = value
@@ -96,8 +115,20 @@ export default {
       this.theme = value
     },
 
+    setSize(value) {
+      this.size = value
+    },
+
     setActiveIcon(value) {
       this.activeIcon = value
+    },
+
+    closeOverlay() {
+      this.setActiveIcon(null);
+    },
+
+    resize() {
+      this.isMobile = window.innerWidth < 768
     }
   }
 }
@@ -119,9 +150,10 @@ export default {
   min-height: 100vh;
 
   > .wrap {
+    width: 100%;
     max-width: 1536px;
     padding-left: 10px;
-    padding-left: 10px;
+    padding-right: 10px;
     box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;

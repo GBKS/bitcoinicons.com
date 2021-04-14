@@ -3,8 +3,8 @@
     <div class="icon">
       <img
         :src="iconFile"
-        width="30"
-        height="30"
+        :width="iconSize"
+        :height="iconSize"
         :alt="iconData.name"
       >
     </div>
@@ -20,6 +20,7 @@ export default {
     iconId: String,
     iconData: Object,
     styleOption: String,
+    size: String,
     activeIcon: Object
   },
 
@@ -31,6 +32,8 @@ export default {
         c.push('-active');
       }
 
+      c.push('-' + this.size)
+
       return c.join(' ');
     },
 
@@ -40,6 +43,18 @@ export default {
 
     iconFile() {
       return 'svg/'+this.styleOption+'/'+this.iconId+'.svg';
+    },
+
+    iconSize() {
+      var result = 24;
+
+      if(this.size == 'small') {
+        result = 16;
+      } else if(this.size == 'large') {
+        result = 32;
+      }
+
+      return result;
     }
   },
 
@@ -87,8 +102,15 @@ export default {
   position: relative;
 
   .icon {
-    width: 30px;
-    height: 30px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+      transition: all 150ms $ease;
+    }
   }
 
   p {

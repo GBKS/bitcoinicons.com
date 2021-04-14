@@ -1,12 +1,22 @@
 <template>
   <transition name="slide-in-out">
     <div :class="className" :style="styleObject" v-if="activeIcon">
-      <h6>{{ activeIcon ? activeIcon.data.name : 'blah' }}</h6>
+      <IconOverlayHeader
+        :activeIcon="activeIcon"
+        @close="close"
+      />
+      <IconOverlayStylePicker
+        v-if="isMobile"
+        :styleOption="styleOptionModel"
+        @setStyleOption="setStyleOption"
+      />
       <IconOverlaySection
+        v-if="!isMobile || (isMobile && styleOptionModel == 'filled')"
         styleName="filled"
         :iconData="activeIcon"
       />
       <IconOverlaySection
+        v-if="!isMobile || (isMobile && styleOptionModel == 'outline')"
         styleName="outline"
         :iconData="activeIcon"
       />
@@ -15,17 +25,29 @@
 </template>
 
 <script>
-import IconOverlaySection from '../components/IconOverlaySection.vue'
+import IconOverlayHeader from '@/components/IconOverlay/Header.vue'
+import IconOverlaySection from '@/components/IconOverlay/Section.vue'
+import IconOverlayStylePicker from '@/components/IconOverlay/StylePicker.vue'
 
 export default {
   name: 'IconOverlay',
   
   components: {
-    IconOverlaySection
+    IconOverlayHeader,
+    IconOverlaySection,
+    IconOverlayStylePicker
   },
 
   props: {
-    activeIcon: Object
+    activeIcon: Object,
+    isMobile: Boolean,
+    styleOption: String
+  },
+
+  data() {
+    return {
+      styleOptionModel: this.styleOption
+    }
   },
 
   computed: {
@@ -40,7 +62,7 @@ export default {
     styleObject() {
       var s = {};
 
-      if(this.activeIcon) {
+      if(this.activeIcon && !this.isMobile) {
         switch(this.alignment) {
           case 'left':
             s.left = this.activeIcon.x + 'px';
@@ -80,6 +102,17 @@ export default {
     iconFileOutline() {
       return 'svg/outline/'+this.activeIcon.id+'.svg';
     }
+  },
+
+  methods: {
+    setStyleOption(value) {
+      console.log('ss', value);
+      this.styleOptionModel = value
+    },
+
+    close() {
+      this.$emit('close')
+    }
   }
 }
 </script>
@@ -87,9 +120,9 @@ export default {
 
 <style lang="scss" scoped>
 
-@import "../scss/variables.scss";
-@import "../scss/mixins.scss";
-@import "../scss/animations.scss";
+@import "@/scss/variables.scss";
+@import "@/scss/mixins.scss";
+@import "@/scss/animations.scss";
 
 .icon-overlay {
   flex-grow: 1;
@@ -97,7 +130,6 @@ export default {
   background-color: var(--back);
   border-radius: 10px;
   box-shadow: 0 25px 75px -25px rgba(black, 0.35);
-  border: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
   display: flex;
   flex-wrap: wrap;
   width: 500px;
@@ -149,30 +181,23 @@ export default {
     }
   }
 
-  h6 {
-    flex-basis: 100%;
-    @include r('font-size', 18, 24);
-    border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
-    text-align: center;
-    margin: 0;
-    font-weight: 400;
-    padding: 15px 20px;
-    color: var(--front);
+  @include media-query(small) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    align-content: flex-start;
   }
 
-  @include media-query(small) {
-    flex-basis: 100%;
-    border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+  @include media-query(medium-up) {
+    border: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
   }
 }
 
 .--theme-dark {
   .icon-overlay {
-    // border-color: rgba(var(--frontRGB), 0.3);
 
-    h6 {
-      // border-color: rgba(var(--frontRGB), 0.2);
-    }
   }
 }
 

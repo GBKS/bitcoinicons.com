@@ -27,16 +27,17 @@
     <meta property="og:site_name" content="<%= htmlWebpackPlugin.options.title %>" />
     <meta property="og:image" content="<%= htmlWebpackPlugin.options.preview %>" />
 
-    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:card" content="summary_large_image" />
     <meta property="twitter:title" content="<%= htmlWebpackPlugin.options.title %>" />
+    <meta property="twitter:description" content="<%= htmlWebpackPlugin.options.description %>" />
     <meta property="twitter:image" content="<%= htmlWebpackPlugin.options.preview %>" />
+    <meta property="twitter:image:alt" content="Grid of interface icons" />
     <meta name="twitter:site" content="@bitcoin_design" />
   </head>
   <body>
     <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue. Alternatively, you can visit <a href="https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set" target="_blank" rel="noreferrer noopener">Figma</a> and <a href="https://github.com/BitcoinDesign/Bitcoin-Icons" target="_blank" rel="noreferrer noopener">Github</a> for the icon source and implementation-ready assets.</strong>
     </noscript>
     <div id="app"></div>
-    <!-- built files will be auto injected -->
   </body>
 </html>
