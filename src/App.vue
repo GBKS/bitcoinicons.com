@@ -136,15 +136,13 @@ export default {
 
 <style lang="scss">
 
+@import "scss/fonts.scss";
 @import "scss/variables.scss";
 @import "scss/mixins.scss";
 @import "scss/animations.scss";
 @import "scss/normalize.scss";
 
 #app {
-  font-family: Inter, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: var(--back);
   transition: background-color 250ms $ease;
   min-height: 100vh;

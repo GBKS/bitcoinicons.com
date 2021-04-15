@@ -1,5 +1,11 @@
 <template>
-  <div :class="classObject" @click="onClick" ref="canvas">
+  <div
+    :class="classObject"
+    ref="canvas"
+    role="button"
+    :aria-pressed="isActive"
+    @click="onClick"
+  >
     <div class="icon">
       <img
         :src="iconFile"

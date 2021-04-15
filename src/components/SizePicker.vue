@@ -5,6 +5,7 @@
         :key="index"
         :class="item.active ? '-active' : ''"
         :title="item.title"
+        :aria-pressed="item.active"
         @click="setSize(item.id)"
     >{{ item.name }}</button>
   </div>

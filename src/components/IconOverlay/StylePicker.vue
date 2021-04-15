@@ -5,6 +5,7 @@
         :key="index"
         :class="item.active ? '-active' : ''"
         :disabled="item.active"
+        :aria-pressed="item.active"
         @click="setStyleOption(item.id)"
     >{{ item.name }}</button>
   </div>

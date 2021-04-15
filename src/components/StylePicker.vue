@@ -4,6 +4,7 @@
         v-for="(item, index) in options"
         :key="index"
         :class="item.active ? '-active' : ''"
+        :aria-pressed="item.active"
         @click="setStyleOption(item.id)"
     >{{ item.name }}</button>
   </div>

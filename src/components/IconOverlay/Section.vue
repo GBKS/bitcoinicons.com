@@ -1,14 +1,16 @@
 <template>
   <transition name="fade">
     <div class="icon-overlay-section">
-      <div class="icon">
-        <img
-          :src="iconFile"
-          width="250"
-          height="250"
-          :alt="iconData.name"
-        >
-      </div>
+      <transition name="icon-fade" mode="out-in">
+        <div class="icon" :key="iconData.id">
+          <img
+            :src="iconFile"
+            width="250"
+            height="250"
+            :alt="iconData.data.name"
+          >
+        </div>
+      </transition>
       <div class="small-icons">
         <div class="icon">
           <img
@@ -75,7 +77,6 @@ export default {
 
 .icon-overlay-section {
   flex-grow: 1;
-  // box-sizing: border-box;
   position: relative;
 
   &.fade-enter-active,
@@ -121,6 +122,16 @@ export default {
       width: 100%;
       height: auto;
     }
+
+    &.icon-fade-enter-active,
+    &.icon-fade-leave-active {
+      transition: all 150ms $ease;
+    }
+
+    &.icon-fade-enter,
+    &.icon-fade-leave-to {
+      opacity: 0;
+    }
   }
 
   & + .icon-overlay-section {
@@ -144,23 +155,13 @@ export default {
         img {
           filter: invert(100%);
         }
-
-        & + .icon {
-          // border-color: rgba(var(--frontRGB), 0.2);
-        }
       }
     }
 
     > .icon {
-      // border-color: rgba(var(--frontRGB), 0.2);
-
       img {
         filter: invert(100%);
       }
-    }
-
-    & + .icon-overlay-section {
-      // border-color: rgba(var(--frontRGB), 0.2);
     }
   }
 }
