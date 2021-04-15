@@ -96,4 +96,14 @@ export default {
   }
 }
 
+.--theme-dark {
+  .icon-overlay-header {
+    button {
+      img {
+        filter: invert(100%);
+      }
+    }
+  }
+}
+
 </style>
