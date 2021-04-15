@@ -54,7 +54,9 @@ export default {
     className() {
       var s = ['icon-overlay'];
 
-      s.push('-' + this.alignment);
+      if(!this.isMobile) {
+        s.push('-' + this.alignment);
+      }
 
       return s.join(' ');
     },
@@ -135,21 +137,29 @@ export default {
   width: 500px;
   transition: all 500ms $ease;
 
-  &.-left {
-    transform: translate(0, 0);
+  @include media-query(small) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    align-content: flex-start;
+
+    &.slide-in-out-enter-active,
+    &.slide-in-out-leave-active {
+      transition: all 250ms $ease;
+      transform: translateY(0px);
+    }
+
+    &.slide-in-out-enter,
+    &.slide-in-out-leave-to {
+      opacity: 0;
+      transform: translateY(15px);
+    }
   }
 
-  &.-right {
-    transform: translate(-100%, 0);
-  }
-
-  &.-center {
-    transform: translate(-50%, 0);
-  }
-
-  &.slide-in-out-enter-active,
-  &.slide-in-out-leave-active {
-    transition: all 250ms $ease;
+  @include media-query(medium-up) {
+    border: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
 
     &.-left {
       transform: translate(0, 0);
@@ -162,36 +172,40 @@ export default {
     &.-center {
       transform: translate(-50%, 0);
     }
-  }
 
-  &.slide-in-out-enter,
-  &.slide-in-out-leave-to {
-    opacity: 0;
+    &.slide-in-out-enter-active,
+    &.slide-in-out-leave-active {
+      transition: all 250ms $ease;
 
-    &.-left {
-      transform: translate(0, 15px);
+      &.-left {
+        transform: translate(0, 0);
+      }
+
+      &.-right {
+        transform: translate(-100%, 0);
+      }
+
+      &.-center {
+        transform: translate(-50%, 0);
+      }
     }
 
-    &.-right {
-      transform: translate(-100%, 15px);
+    &.slide-in-out-enter,
+    &.slide-in-out-leave-to {
+      opacity: 0;
+
+      &.-left {
+        transform: translate(0, 15px);
+      }
+
+      &.-right {
+        transform: translate(-100%, 15px);
+      }
+
+      &.-center {
+        transform: translate(-50%, 15px);
+      }
     }
-
-    &.-center {
-      transform: translate(-50%, 15px);
-    }
-  }
-
-  @include media-query(small) {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    align-content: flex-start;
-  }
-
-  @include media-query(medium-up) {
-    border: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
   }
 }
 
