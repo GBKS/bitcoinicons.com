@@ -115,6 +115,7 @@ export default {
 
   > .icon {
     border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
+    padding: 30px;
 
     img {
       width: 100%;
