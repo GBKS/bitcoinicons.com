@@ -47,8 +47,6 @@ export default {
   padding-right: 20px;
 
   .seal {
-    margin-right: 30px;
-
     svg {
         @include r('width', 125, 200);
         @include r('height', 125, 200);
@@ -58,7 +56,7 @@ export default {
 
   .copy {
     h2 {
-        margin: 0;
+      margin: 0;
       @include r('font-size', 18, 24);
       @include r('letter-spacing', -0.5, -1);
       font-weight: 400;
@@ -93,7 +91,7 @@ export default {
         background-color: $primary;
 
         img {
-            transform: translateX(5px);
+          transform: translateX(5px);
         }
       }
     }
@@ -111,6 +109,12 @@ export default {
         margin-top: 20px;
         text-align: center;
       }
+    }
+  }
+
+  @include media-query(medium-up) {
+    .seal {
+      margin-right: 30px;
     }
   }
 }
