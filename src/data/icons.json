@@ -4,6 +4,7 @@
         "name": "Gear",
         "filled": true,
         "svg": true,
+        "description": "*general,settings",
         "png": true,
         "outline": true
     },
@@ -12,38 +13,7 @@
         "name": "Contacts",
         "filled": true,
         "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "arrow-up":
-    {
-        "name": "Arrow up",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "arrow-down":
-    {
-        "name": "Arrow down",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "arrow-right":
-    {
-        "name": "Arrow right",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "arrow-left":
-    {
-        "name": "Arrow left",
-        "filled": true,
-        "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -52,14 +22,7 @@
         "name": "Minus",
         "filled": true,
         "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "plus":
-    {
-        "name": "Plus",
-        "filled": true,
-        "svg": true,
+        "description": "*arrows,subtract,remove,collapse",
         "png": true,
         "outline": true
     },
@@ -68,54 +31,7 @@
         "name": "Check",
         "filled": true,
         "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "x":
-    {
-        "name": "X",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "caret-up":
-    {
-        "name": "Caret up",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "caret-down":
-    {
-        "name": "Caret down",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "caret-right":
-    {
-        "name": "Caret right",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "caret-left":
-    {
-        "name": "Caret left",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "flip-horizontal":
-    {
-        "name": "Flip horizontal",
-        "filled": true,
-        "svg": true,
+        "description": "*arrows,confirm,ok",
         "png": true,
         "outline": true
     },
@@ -124,118 +40,16 @@
         "name": "Flip vertical",
         "filled": true,
         "svg": true,
+        "description": "*arrows",
         "png": true,
         "outline": true
     },
-    "wallet":
+    "flip-horizontal":
     {
-        "name": "Wallet",
+        "name": "Flip horizontal",
         "filled": true,
         "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "devices":
-    {
-        "name": "Devices",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "share":
-    {
-        "name": "Share",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "lock":
-    {
-        "name": "Lock",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "search":
-    {
-        "name": "Search",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "home":
-    {
-        "name": "Home",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "cloud":
-    {
-        "name": "Cloud",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "key":
-    {
-        "name": "Key",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "two-keys":
-    {
-        "name": "Two keys",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "receive":
-    {
-        "name": "Receive",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "exit":
-    {
-        "name": "Exit",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "transfer":
-    {
-        "name": "Transfer",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "send":
-    {
-        "name": "Send",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "qr-code":
-    {
-        "name": "QR code",
-        "filled": true,
-        "svg": true,
+        "description": "*arrows",
         "png": true,
         "outline": true
     },
@@ -244,6 +58,133 @@
         "name": "Unmixed",
         "filled": true,
         "svg": true,
+        "description": "*arrows",
+        "png": true,
+        "outline": true
+    },
+    "wallet":
+    {
+        "name": "Wallet",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "devices":
+    {
+        "name": "Devices",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin,hardware",
+        "png": true,
+        "outline": true
+    },
+    "share":
+    {
+        "name": "Share",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "png": true,
+        "outline": true
+    },
+    "lock":
+    {
+        "name": "Lock",
+        "filled": true,
+        "svg": true,
+        "description": "*general,freeze",
+        "png": true,
+        "outline": true
+    },
+    "search":
+    {
+        "name": "Search",
+        "filled": true,
+        "svg": true,
+        "description": "*general,magnify",
+        "png": true,
+        "outline": true
+    },
+    "home":
+    {
+        "name": "Home",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "png": true,
+        "outline": true
+    },
+    "cloud":
+    {
+        "name": "Cloud",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "png": true,
+        "outline": true
+    },
+    "key":
+    {
+        "name": "Key",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "two-keys":
+    {
+        "name": "Two keys",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin,multisig, vault",
+        "png": true,
+        "outline": true
+    },
+    "receive":
+    {
+        "name": "Receive",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows",
+        "png": true,
+        "outline": true
+    },
+    "send":
+    {
+        "name": "Send",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows",
+        "png": true,
+        "outline": true
+    },
+    "exit":
+    {
+        "name": "Exit",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows",
+        "png": true,
+        "outline": true
+    },
+    "transfer":
+    {
+        "name": "Transfer",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows",
+        "png": true,
+        "outline": true
+    },
+    "qr-code":
+    {
+        "name": "QR code",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -252,6 +193,7 @@
         "name": "Mixed",
         "filled": true,
         "svg": true,
+        "description": "*arrows,mix,coinjoin",
         "png": true,
         "outline": true
     },
@@ -260,6 +202,7 @@
         "name": "Miner",
         "filled": true,
         "svg": true,
+        "description": "*bitcoin,mining",
         "png": true,
         "outline": true
     },
@@ -268,6 +211,7 @@
         "name": "Copy",
         "filled": true,
         "svg": true,
+        "description": "*general,paste",
         "png": true,
         "outline": true
     },
@@ -276,6 +220,7 @@
         "name": "File",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -284,6 +229,7 @@
         "name": "Cart",
         "filled": true,
         "svg": true,
+        "description": "*general,buy",
         "png": true,
         "outline": true
     },
@@ -292,6 +238,7 @@
         "name": "Ellipsis",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -300,6 +247,7 @@
         "name": "Export",
         "filled": true,
         "svg": true,
+        "description": "*general,share,send",
         "png": true,
         "outline": true
     },
@@ -308,6 +256,7 @@
         "name": "Question",
         "filled": true,
         "svg": true,
+        "description": "*general,help",
         "png": true,
         "outline": true
     },
@@ -316,6 +265,7 @@
         "name": "Shared wallet",
         "filled": true,
         "svg": true,
+        "description": "*general,hardware",
         "png": true,
         "outline": true
     },
@@ -324,6 +274,7 @@
         "name": "Safe",
         "filled": true,
         "svg": true,
+        "description": "*general,vault",
         "png": true,
         "outline": true
     },
@@ -332,6 +283,7 @@
         "name": "Alert",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -340,6 +292,7 @@
         "name": "Clear character",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -348,6 +301,7 @@
         "name": "Sofa",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -356,6 +310,7 @@
         "name": "Milk",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -364,30 +319,7 @@
         "name": "Car",
         "filled": true,
         "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "bitcoin-circle":
-    {
-        "name": "Bitcoin circle",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "bitcoin":
-    {
-        "name": "Bitcoin",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "satoshi-v1":
-    {
-        "name": "Satoshi V1",
-        "filled": true,
-        "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -396,6 +328,7 @@
         "name": "Visible",
         "filled": true,
         "svg": true,
+        "description": "*general,show",
         "png": true,
         "outline": true
     },
@@ -404,14 +337,7 @@
         "name": "Hidden",
         "filled": true,
         "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "block":
-    {
-        "name": "Block",
-        "filled": true,
-        "svg": true,
+        "description": "*general,hide",
         "png": true,
         "outline": true
     },
@@ -420,14 +346,7 @@
         "name": "Scan",
         "filled": true,
         "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "lightning":
-    {
-        "name": "Lightning",
-        "filled": true,
-        "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -436,6 +355,7 @@
         "name": "Mnemonic",
         "filled": true,
         "svg": true,
+        "description": "*bitcoin,seed,recovery phrase",
         "png": true,
         "outline": true
     },
@@ -444,6 +364,7 @@
         "name": "Password",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -452,6 +373,7 @@
         "name": "Proxy",
         "filled": true,
         "svg": true,
+        "description": "*arrows",
         "png": true,
         "outline": true
     },
@@ -460,6 +382,7 @@
         "name": "Node",
         "filled": true,
         "svg": true,
+        "description": "*bitcoin",
         "png": true,
         "outline": true
     },
@@ -468,22 +391,7 @@
         "name": "Node 0 connections",
         "filled": true,
         "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "node-1 connection":
-    {
-        "name": "Node 1 connection",
-        "filled": true,
-        "svg": true,
-        "png": true,
-        "outline": true
-    },
-    "node-2 connections":
-    {
-        "name": "Node 2 connections",
-        "filled": true,
-        "svg": true,
+        "description": "*bitcoin",
         "png": true,
         "outline": true
     },
@@ -492,6 +400,25 @@
         "name": "Node 3 connections",
         "filled": true,
         "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "node-2 connections":
+    {
+        "name": "Node 2 connections",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "node-1 connection":
+    {
+        "name": "Node 1 connection",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
         "png": true,
         "outline": true
     },
@@ -500,6 +427,7 @@
         "name": "Info",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -508,6 +436,7 @@
         "name": "No dollars",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -516,6 +445,7 @@
         "name": "Exchange",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -524,6 +454,7 @@
         "name": "SD Card",
         "filled": true,
         "svg": true,
+        "description": "*general,hardware",
         "png": true,
         "outline": true
     },
@@ -532,6 +463,7 @@
         "name": "Menu",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -540,6 +472,7 @@
         "name": "Clock",
         "filled": true,
         "svg": true,
+        "description": "*general,time",
         "png": true,
         "outline": true
     },
@@ -548,6 +481,7 @@
         "name": "Edit",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -556,6 +490,7 @@
         "name": "USB",
         "filled": true,
         "svg": true,
+        "description": "*general,hardware",
         "png": true,
         "outline": true
     },
@@ -564,6 +499,7 @@
         "name": "Snowflake",
         "filled": true,
         "svg": true,
+        "description": "*general,freeze",
         "png": true,
         "outline": true
     },
@@ -572,6 +508,7 @@
         "name": "Magic wand",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "png": true,
         "outline": true
     },
@@ -580,6 +517,7 @@
         "name": "Link",
         "filled": true,
         "svg": true,
+        "description": "*general,chain",
         "png": true,
         "outline": true
     },
@@ -588,6 +526,7 @@
         "name": "Console",
         "filled": true,
         "svg": true,
+        "description": "*general,terminal",
         "png": true,
         "outline": true
     },
@@ -596,6 +535,7 @@
         "name": "Node hardware",
         "filled": true,
         "svg": true,
+        "description": "*bitcoin",
         "png": true,
         "outline": true
     },
@@ -604,6 +544,169 @@
         "name": "Grid",
         "filled": true,
         "svg": true,
+        "description": "*general",
+        "png": true,
+        "outline": true
+    },
+    "caret-left":
+    {
+        "name": "Caret left",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,back",
+        "png": true,
+        "outline": true
+    },
+    "caret-right":
+    {
+        "name": "Caret right",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,forward",
+        "png": true,
+        "outline": true
+    },
+    "caret-down":
+    {
+        "name": "Caret down",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,expand",
+        "png": true,
+        "outline": true
+    },
+    "caret-up":
+    {
+        "name": "Caret up",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,collapse",
+        "png": true,
+        "outline": true
+    },
+    "cross":
+    {
+        "name": "Cross",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,delete,remove",
+        "png": true,
+        "outline": true
+    },
+    "plus":
+    {
+        "name": "Plus",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,add,increase,expand",
+        "png": true,
+        "outline": true
+    },
+    "arrow-left":
+    {
+        "name": "Arrow left",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,back",
+        "png": true,
+        "outline": true
+    },
+    "arrow-down":
+    {
+        "name": "Arrow down",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows",
+        "png": true,
+        "outline": true
+    },
+    "arrow-up":
+    {
+        "name": "Arrow up",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows",
+        "png": true,
+        "outline": true
+    },
+    "arrow-right":
+    {
+        "name": "Arrow right",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,forward",
+        "png": true,
+        "outline": true
+    },
+    "lightning":
+    {
+        "name": "Lightning",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "trash":
+    {
+        "name": "Trash",
+        "filled": true,
+        "svg": true,
+        "description": "*general,bin,delete",
+        "png": true,
+        "outline": true
+    },
+    "satoshi-v1":
+    {
+        "name": "Satoshi V1",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "satoshi-v2":
+    {
+        "name": "Satoshi V2",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "mining":
+    {
+        "name": "Mining",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "bitcoin":
+    {
+        "name": "Bitcoin",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "bitcoin-circle":
+    {
+        "name": "Bitcoin circle",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "png": true,
+        "outline": true
+    },
+    "block":
+    {
+        "name": "Block",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
         "png": true,
         "outline": true
     }

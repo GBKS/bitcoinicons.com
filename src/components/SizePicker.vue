@@ -25,19 +25,19 @@ export default {
         {
           id: 'small',
           name: 'S',
-          title: 'Small',
+          title: 'Small, 16px',
           active: this.size == 'small'
         },
         {
           id: 'medium',
           name: 'M',
-          title: 'Medium',
+          title: 'Medium, 24px',
           active: this.size == 'medium'
         },
         {
           id: 'large',
           name: 'L',
-          title: 'Large',
+          title: 'Large, 32px',
           active: this.size == 'large'
         }
       ]
