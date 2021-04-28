@@ -6,7 +6,7 @@
         title="Close overlay"
       >
         <img
-          src="svg/filled/x.svg"
+          src="svg/filled/cross.svg"
           width="24"
           height="24"
           alt="Close"
