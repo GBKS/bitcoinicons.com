@@ -34,7 +34,7 @@
 
 @mixin r($property, $minSize, $maxSize) {
   $multiplier: ($maxSize - $minSize)/(1280 - 375)*100;
-  $baseSize: $minSize - 375 / 100 * $multiplier + 'px';
+  $baseSize: $minSize - (375 / 100) * $multiplier + 'px';
 
   #{$property}: calc(#{$baseSize} + 1vw * #{$multiplier});
 
