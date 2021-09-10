@@ -3,38 +3,30 @@
     <div class="icon-overlay-section">
       <transition name="icon-fade" mode="out-in">
         <div class="icon" :key="iconData.id">
-          <img
-            :src="iconFile"
-            width="250"
-            height="250"
+          <component
+            :is="iconComponentName"
             :alt="iconData.data.name"
-          >
+          />
         </div>
       </transition>
       <div class="small-icons">
         <div class="icon">
-          <img
-            :src="iconFile"
-            width="16"
-            height="16"
+          <component
+            :is="iconComponentName"
             alt="Small"
-          >
+          />
         </div>
         <div class="icon">
-          <img
-            :src="iconFile"
-            width="24"
-            height="24"
+          <component
+            :is="iconComponentName"
             alt="Medium"
-          >
+          />
         </div>
         <div class="icon">
-          <img
-            :src="iconFile"
-            width="32"
-            height="32"
+          <component
+            :is="iconComponentName"
             alt="Big"
-          >
+          />
         </div>
       </div>
       <IconOverlayContainers
@@ -61,8 +53,16 @@ export default {
   },
 
   computed: {
-    iconFile() {
-      return 'svg/'+this.styleName+'/'+this.iconData.id+'.svg';
+    iconComponentName() {
+      let result = this.iconData.id + 'Icon'
+
+      if(this.styleName == 'filled') {
+        result += 'Filled'
+      } else {
+        result += 'Outline'
+      }
+
+      return result
     }
   }
 }
@@ -104,8 +104,29 @@ export default {
       padding-top: 10px;
       padding-bottom: 10px;
 
-      img {
+      &:first-child {
+        svg {
+          width: 16px;
+          height: 16px;
+        }
+      }
 
+      &:nth-child(2) {
+        svg {
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      &:nth-child(3) {
+        svg {
+          width: 32px;
+          height: 32px;
+        }
+      }
+
+      svg {
+        color: var(--front);
       }
 
       & + .icon {
@@ -118,9 +139,10 @@ export default {
     border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
     padding: 30px;
 
-    img {
+    svg {
       width: 100%;
       height: auto;
+      color: var(--front);
     }
 
     &.icon-fade-enter-active,

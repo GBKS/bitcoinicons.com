@@ -3,42 +3,34 @@
     <div class="icon-overlay-containers">
       <div class="icon -circle -outline">
         <div class="wrap">
-          <img
-            :src="iconFile"
-            width="26"
-            height="26"
+          <component
+            :is="iconComponentName"
             alt="Outline circle"
-          >
+          />
         </div>
       </div>
       <div class="icon -circle -filled">
         <div class="wrap">
-          <img
-            :src="iconFile"
-            width="26"
-            height="26"
+          <component
+            :is="iconComponentName"
             alt="Outline filled"
-          >
+          />
         </div>
       </div>
       <div class="icon -square -outline">
         <div class="wrap">
-          <img
-            :src="iconFile"
-            width="26"
-            height="26"
+          <component
+            :is="iconComponentName"
             alt="Square outline"
-          >
+          />
         </div>
       </div>
       <div class="icon -square -filled">
         <div class="wrap">
-          <img
-            :src="iconFile"
-            width="26"
-            height="26"
+          <component
+            :is="iconComponentName"
             alt="Square filled"
-          >
+          />
         </div>
       </div>
     </div>
@@ -55,8 +47,16 @@ export default {
   },
 
   computed: {
-    iconFile() {
-      return 'svg/'+this.styleName+'/'+this.iconData.id+'.svg';
+    iconComponentName() {
+      let result = this.iconData.id + 'Icon'
+
+      if(this.styleName == 'filled') {
+        result += 'Filled'
+      } else {
+        result += 'Outline'
+      }
+
+      return result
     }
   }
 }
@@ -97,14 +97,15 @@ export default {
 
     .wrap {
       padding: 2px;
+
+      svg {
+        width: 26px;
+        height: 26px;
+      }
     }
 
     &.-circle {
       line-height: 0;
-
-      .wrap {
-
-      }
 
       &.-outline {
         .wrap {
@@ -118,8 +119,8 @@ export default {
           background-color: var(--front);
           border-radius: 100px;
 
-          img {
-            filter: invert(100%);
+          svg {
+            color: var(--back);
           }
         }
       }
@@ -128,10 +129,6 @@ export default {
     &.-square {
       line-height: 0;
 
-      .wrap {
-
-      }
-
       &.-outline {
         .wrap {
           border: 1px solid var(--front);
@@ -144,15 +141,11 @@ export default {
           background-color: var(--front);
           border-radius: 3px;
 
-          img {
-            filter: invert(100%);
+          svg {
+            color: var(--back);
           }
         }
       }
-    }
-
-    img {
-
     }
 
     & + .icon {
@@ -163,14 +156,12 @@ export default {
 
 .--theme-dark {
   .icon-overlay-containers {
-    // border-color: rgba(var(--frontRGB), 0.2);
-
     .icon {
       &.-circle {
         &.-outline {
           .wrap {
-            img {
-              filter: invert(100%);
+            svg {
+              color: var(--back);
             }
           }
         }
@@ -180,8 +171,8 @@ export default {
             background-color: var(--front);
             border-radius: 100px;
 
-            img {
-              filter: none;
+            svg {
+              color: var(--back);
             }
           }
         }
@@ -192,23 +183,19 @@ export default {
 
         &.-outline {
           .wrap {
-            img {
-              filter: invert(100%);
+            svg {
+              color: var(--back);
             }
           }
         }
 
         &.-filled {
           .wrap {
-            img {
-              filter: none;
+            svg {
+              color: var(--front);
             }
           }
         }
-      }
-
-      & + .icon {
-        // border-color: rgba(var(--frontRGB), 0.2);
       }
     }
   }

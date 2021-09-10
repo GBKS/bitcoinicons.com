@@ -1,8 +1,17 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
 import App from './App.vue'
 
-Vue.config.productionTip = false
+import * as FilledIcons from '@bitcoin-design/bitcoin-icons-vue/filled';
+import * as OutlineIcons from '@bitcoin-design/bitcoin-icons-vue/outline';
 
-new Vue({
-  render: h => h(App),
-}).$mount('#app')
+const appInstance = createApp(App)
+
+Object.keys(FilledIcons).forEach(key => {
+	appInstance.component(key + 'Filled', FilledIcons[key]);
+});
+
+Object.keys(OutlineIcons).forEach(key => {
+	appInstance.component(key + 'Outline', OutlineIcons[key]);
+});
+
+appInstance.mount('#app')
