@@ -7,12 +7,10 @@
     @click="onClick"
   >
     <div class="icon">
-      <img
-        :src="iconFile"
-        :width="iconSize"
-        :height="iconSize"
+      <component
+        :is="iconComponentName"
         :alt="iconData.name"
-      >
+      />
     </div>
     <p>{{ iconData.name }}</p>
   </div>
@@ -47,8 +45,16 @@ export default {
       return this.activeIcon && this.activeIcon.id == this.iconId;
     },
 
-    iconFile() {
-      return 'svg/'+this.styleOption+'/'+this.iconId+'.svg';
+    iconComponentName() {
+      let result = this.iconData.id + 'Icon'
+
+      if(this.styleOption == 'filled') {
+        result += 'Filled'
+      } else {
+        result += 'Outline'
+      }
+
+      return result
     },
 
     iconSize() {
@@ -62,6 +68,13 @@ export default {
 
       return result;
     }
+  },
+
+  mounted() {
+    // console.log('item', this.styleOption)
+    // for(let k in this.iconData) {
+    //   console.log('k', k, this.iconData[k])
+    // }
   },
 
   methods: {
@@ -113,8 +126,11 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-
-    img {
+    color: black;
+    
+    svg {
+      width: 24px;
+      height: 24px;
       transition: all 150ms $ease;
     }
   }
@@ -141,6 +157,20 @@ export default {
       pointer-events: none;
     }
   }
+
+  &.-small {
+    svg {
+      width: 16px;
+      height: 16px;
+    }
+  }
+
+  &.-large {
+    svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
 }
 
 .--theme-dark {
@@ -148,7 +178,8 @@ export default {
     // border-color: rgba(var(--frontRGB), var(--borderOpacity));
 
     .icon {
-      filter: invert(100%);
+      color: white;
+      // filter: invert(100%);
     }
 
     &.-active {

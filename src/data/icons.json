@@ -44,7 +44,7 @@
         "name": "Unmixed",
         "filled": true,
         "svg": true,
-        "description": "*arrows",
+        "description": "*arrows,coinjoin",
         "id": "Unmixed",
         "png": true,
         "outline": true
@@ -94,7 +94,7 @@
         "name": "Send",
         "filled": true,
         "svg": true,
-        "description": "*arrows",
+        "description": "*arrows,export",
         "id": "Send",
         "png": true,
         "outline": true
@@ -104,7 +104,7 @@
         "name": "Receive",
         "filled": true,
         "svg": true,
-        "description": "*arrows",
+        "description": "*arrows,download,import",
         "id": "Receive",
         "png": true,
         "outline": true
@@ -186,36 +186,6 @@
         "svg": true,
         "description": "*arrows,confirm,ok",
         "id": "Check",
-        "png": true,
-        "outline": true
-    },
-    "caret-up":
-    {
-        "name": "Caret up",
-        "filled": true,
-        "svg": true,
-        "description": "*arrows,collapse",
-        "id": "CaretUp",
-        "png": true,
-        "outline": true
-    },
-    "caret-down":
-    {
-        "name": "Caret down",
-        "filled": true,
-        "svg": true,
-        "description": "*arrows,expand",
-        "id": "CaretDown",
-        "png": true,
-        "outline": true
-    },
-    "caret-right":
-    {
-        "name": "Caret right",
-        "filled": true,
-        "svg": true,
-        "description": "*arrows,forward",
-        "id": "CaretRight",
         "png": true,
         "outline": true
     },
@@ -314,7 +284,7 @@
         "name": "Edit",
         "filled": true,
         "svg": true,
-        "description": "*general",
+        "description": "*general,pen,pencil",
         "id": "Edit",
         "png": true,
         "outline": true
@@ -344,7 +314,7 @@
         "name": "Info",
         "filled": true,
         "svg": true,
-        "description": "*general",
+        "description": "*general,help",
         "id": "Info",
         "png": true,
         "outline": true
@@ -354,7 +324,7 @@
         "name": "Alert",
         "filled": true,
         "svg": true,
-        "description": "*general",
+        "description": "*general,warning",
         "id": "Alert",
         "png": true,
         "outline": true
@@ -444,7 +414,7 @@
         "name": "Shared wallet",
         "filled": true,
         "svg": true,
-        "description": "*general,hardware",
+        "description": "*general,hardware,device",
         "id": "SharedWallet",
         "png": true,
         "outline": true
@@ -474,7 +444,7 @@
         "name": "Ellipsis",
         "filled": true,
         "svg": true,
-        "description": "*general",
+        "description": "*general, menu",
         "id": "Ellipsis",
         "png": true,
         "outline": true
@@ -629,7 +599,7 @@
         "png": true,
         "outline": true
     },
-    "node-3 connections":
+    "node-3-connections":
     {
         "name": "Node 3 connections",
         "filled": true,
@@ -639,7 +609,7 @@
         "png": true,
         "outline": true
     },
-    "node-2 connections":
+    "node-2-connections":
     {
         "name": "Node 2 connections",
         "filled": true,
@@ -649,7 +619,7 @@
         "png": true,
         "outline": true
     },
-    "node-1 connection":
+    "node-1-connection":
     {
         "name": "Node 1 connection",
         "filled": true,
@@ -659,7 +629,7 @@
         "png": true,
         "outline": true
     },
-    "node-0 connections":
+    "node-0-connections":
     {
         "name": "Node 0 connections",
         "filled": true,
@@ -714,7 +684,7 @@
         "name": "Two keys",
         "filled": true,
         "svg": true,
-        "description": "*bitcoin,multisig, vault",
+        "description": "*bitcoin, multisig, vault",
         "id": "TwoKeys",
         "png": true,
         "outline": true
@@ -744,7 +714,7 @@
         "name": "Wallet",
         "filled": true,
         "svg": true,
-        "description": "*bitcoin",
+        "description": "*bitcoin, account",
         "id": "Wallet",
         "png": true,
         "outline": true
@@ -784,7 +754,48 @@
         "name": "Lock",
         "filled": true,
         "svg": true,
+        "description": "*general",
         "id": "Lock",
+        "png": true,
+        "outline": true
+    },
+    "unlock":
+    {
+        "name": "Unlock",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "id": "Unlock",
+        "png": true,
+        "outline": true
+    },
+    "caret-up":
+    {
+        "name": "Caret up",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,up",
+        "id": "CaretUp",
+        "png": true,
+        "outline": true
+    },
+    "caret-down":
+    {
+        "name": "Caret down",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,down",
+        "id": "CaretDown",
+        "png": true,
+        "outline": true
+    },
+    "caret-right":
+    {
+        "name": "Caret right",
+        "filled": true,
+        "svg": true,
+        "description": "*arrows,forward",
+        "id": "CaretRight",
         "png": true,
         "outline": true
     }

@@ -11,12 +11,8 @@
         rel="noreferrer noopener"
       >
         Check it out
-        <img
-          src="svg/filled/arrow-right.svg"
-          width="24"
-          height="24"
-          alt="Arrow right"
-        ></a>
+        <ArrowRightIconFilled alt="Arrow right" />
+      </a>
     </div>
   </div>
 </template>
@@ -79,6 +75,15 @@ export default {
       font-weight: 600;
       transition: all 100ms $ease;
 
+      svg {
+        display: inline-block;
+        vertical-align: middle;
+        width: 24px;
+        height: 24px;
+        transition: all 150ms $ease;
+        transform: translate(0, -2px);
+      }
+
       img {
         filter: invert(100%);
         vertical-align: middle;
@@ -90,8 +95,8 @@ export default {
       &:hover {
         background-color: $primary;
 
-        img {
-          transform: translateX(5px);
+        svg {
+          transform: translate(5px, -2px);
         }
       }
     }
@@ -121,13 +126,7 @@ export default {
 
 .--theme-dark {
   .site-footer {
-    .copy {
-      a {
-        img {
-          filter: none;
-        }
-      }
-    }
+    
   }
 }
 

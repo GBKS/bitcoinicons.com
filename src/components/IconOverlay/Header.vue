@@ -5,12 +5,7 @@
         @click="close"
         title="Close overlay"
       >
-        <img
-          src="svg/filled/cross.svg"
-          width="24"
-          height="24"
-          alt="Close"
-        >
+        <CrossIconFilled alt="Close" />
       </button>
     </div>
 </template>
@@ -71,6 +66,11 @@ export default {
     color: rgba(var(--frontRGB), 0.55);
     transition: color 100ms $ease;
 
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
     &:focus {
       outline: none;
     }
@@ -92,6 +92,7 @@ export default {
 
   @include media-query(medium-up) {
     h6 {
+      
     }
   }
 }
