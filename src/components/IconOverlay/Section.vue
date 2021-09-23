@@ -4,9 +4,17 @@
       <transition name="icon-fade" mode="out-in">
         <div class="icon" :key="iconData.id">
           <component
+            ref="bigIcon"
             :is="iconComponentName"
             :alt="iconData.data.name"
           />
+          <button
+            v-if="!isMobile && clipboardAvailable"
+            :class="copyButtonClass"
+            @click="clickCopy"
+          >
+            <CopyIconFilled />
+          </button>
         </div>
       </transition>
       <div class="small-icons">
@@ -49,7 +57,21 @@ export default {
 
   props: {
     styleName: String,
+    isMobile: Boolean,
     iconData: Object
+  },
+
+  data() {
+    return {
+      clipboardAvailable: navigator.clipboard,
+      copyButtonClicked: false
+    }
+  },
+
+  watch: {
+    iconData() {
+      this.copyButtonClicked = false
+    }
   },
 
   computed: {
@@ -63,6 +85,28 @@ export default {
       }
 
       return result
+    },
+
+    copyButtonClass() {
+      const c = []
+
+      if(this.copyButtonClicked) {
+        c.push('-active')
+      }
+
+      return c
+    }
+  },
+
+  methods: {
+    clickCopy() {
+      const bigIcon = this.$refs.bigIcon
+      const svgCode = bigIcon.outerHTML
+      navigator.clipboard.writeText(svgCode).then(() => {
+
+      })
+
+      this.copyButtonClicked = true
     }
   }
 }
@@ -138,8 +182,9 @@ export default {
   > .icon {
     border-bottom: $borderWidth solid rgba(var(--frontRGB), var(--borderOpacity));
     padding: 30px;
+    position: relative;
 
-    svg {
+    > svg {
       width: 100%;
       height: auto;
       color: var(--front);
@@ -153,6 +198,40 @@ export default {
     &.icon-fade-enter,
     &.icon-fade-leave-to {
       opacity: 0;
+    }
+
+    button {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      padding: 0;
+      appearance: none;
+      border-width: 0;
+      background-color: transparent;
+      opacity: 0;
+      color: var(--front);
+      transition: all 100ms $ease;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      &.-active {
+        color: $primary;
+        animation: copyBounce 0.5s $easeInOutCubic 1;
+      }
+    }
+  }
+
+  &:hover {
+    button {
+      opacity: 0.5;
+
+      &:hover {
+        opacity: 1;
+      }
     }
   }
 
@@ -168,23 +247,37 @@ export default {
   @include media-query(medium-up) {
     flex-basis: 45%;
   }
+
+  @include media-query(small) {
+
+  }
+
+  @include media-query(medium-up) {
+
+  }
 }
 
 .--theme-dark {
   .icon-overlay-section {
-    .small-icons {
-      .icon {
-        img {
-          filter: invert(100%);
-        }
-      }
-    }
 
-    > .icon {
-      img {
-        filter: invert(100%);
-      }
-    }
+  }
+}
+
+@keyframes copyBounce {
+  0% {
+    transform: scale(1, 1);
+  }
+
+  25% {
+    transform: scale(0.75, 0.75);
+  }
+
+  75% {
+    transform: scale(1.25, 1.25);
+  }
+
+  100% {
+    transform: scale(1, 1);
   }
 }
 
