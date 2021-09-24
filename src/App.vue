@@ -71,7 +71,7 @@ export default {
       links: [
         {
           name: 'Download',
-          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons/releases/latest/download/package.zip'
+          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons/archive/refs/tags/v0.1.7.zip'
         },
         {
           name: 'Figma',
