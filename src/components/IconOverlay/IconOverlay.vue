@@ -13,11 +13,13 @@
       <IconOverlaySection
         v-if="!isMobile || (isMobile && styleOptionModel == 'filled')"
         styleName="filled"
+        :isMobile="isMobile"
         :iconData="activeIcon"
       />
       <IconOverlaySection
         v-if="!isMobile || (isMobile && styleOptionModel == 'outline')"
         styleName="outline"
+        :isMobile="isMobile"
         :iconData="activeIcon"
       />
     </div>
@@ -108,7 +110,6 @@ export default {
 
   methods: {
     setStyleOption(value) {
-      console.log('ss', value);
       this.styleOptionModel = value
     },
 

@@ -29,6 +29,7 @@
         @close="closeOverlay"
       />
       <SiteInfo />
+      <ModuleInfo />
       <SiteFooter />
     </div>
   </div>
@@ -39,6 +40,7 @@ import SiteHeader from './components/SiteHeader.vue'
 import OptionsBar from './components/OptionsBar.vue'
 import IconGrid from './components/IconGrid.vue'
 import SiteInfo from './components/SiteInfo.vue'
+import ModuleInfo from './components/ModuleInfo.vue'
 import SiteFooter from './components/SiteFooter.vue'
 import IconOverlay from './components/IconOverlay/IconOverlay.vue'
 
@@ -52,6 +54,7 @@ export default {
     OptionsBar,
     IconGrid,
     SiteInfo,
+    ModuleInfo,
     IconOverlay,
     SiteFooter
   },
@@ -66,21 +69,17 @@ export default {
       activeIcon: null,
       isMobile: false,
       links: [
-        // {
-        //   name: 'Download',
-        //   url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
-        // },
         {
-          name: 'Download on Github',
-          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
+          name: 'Download',
+          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons/archive/refs/tags/v0.1.7.zip'
         },
         {
-          name: 'Contribute on Figma',
+          name: 'Figma',
           url: 'https://www.figma.com/community/file/948545404023677970/Bitcoin-icon-set'
-        // },
-        // {
-        //   name: 'Contribute',
-        //   url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
+        },
+        {
+          name: 'Github',
+          url: 'https://github.com/BitcoinDesign/Bitcoin-Icons'
         }
       ]
     }

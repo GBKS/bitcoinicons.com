@@ -38,7 +38,6 @@ export default {
 
   methods: {
     setStyleOption(value) {
-      console.log('ss', value);
       this.$emit('setStyleOption', value)
     }
   }
