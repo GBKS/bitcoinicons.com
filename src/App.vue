@@ -60,11 +60,16 @@ export default {
   },
 
   data() {
+    let theme = 'light'
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      theme = 'dark'
+    }
+
     return {
       iconData: iconData,
       filterText: '',
       styleOption: 'filled',
-      theme: 'light',
+      theme: theme,
       size: 'medium',
       activeIcon: null,
       isMobile: false,
@@ -99,6 +104,8 @@ export default {
     this.resize()
 
     window.addEventListener('resize', this.resize.bind(this))
+    
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', this.onThemeChange.bind(this));
   },
 
   methods: {
@@ -128,6 +135,10 @@ export default {
 
     resize() {
       this.isMobile = window.innerWidth < 768
+    },
+
+    onThemeChange(event) {
+      this.theme = event.matches ? 'dark' : 'light'
     }
   }
 }
