@@ -1069,13 +1069,13 @@
         "png": true,
         "outline": true
     },
-    "parthenon":
+    "pantheon":
     {
-        "name": "Parthenon",
+        "name": "Pantheon",
         "filled": true,
         "svg": true,
-        "description": "*general",
-        "id": "Parthenon",
+        "description": "*general,bank,account",
+        "id": "Pantheon",
         "png": true,
         "outline": true
     },
