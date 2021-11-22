@@ -798,5 +798,315 @@
         "id": "CaretRight",
         "png": true,
         "outline": true
+    },
+    "graph":
+    {
+        "name": "Graph",
+        "filled": true,
+        "svg": true,
+        "description": "*general,chart",
+        "id": "Graph",
+        "png": true,
+        "outline": true
+    },
+    "shield":
+    {
+        "name": "Shield",
+        "filled": true,
+        "svg": true,
+        "description": "*general,privacy",
+        "id": "Shield",
+        "png": true,
+        "outline": true
+    },
+    "channels":
+    {
+        "name": "Channels",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Channels",
+        "png": true,
+        "outline": true
+    },
+    "channel":
+    {
+        "name": "Channel",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Channel",
+        "png": true,
+        "outline": true
+    },
+    "moon":
+    {
+        "name": "Moon",
+        "filled": true,
+        "svg": true,
+        "description": "*general,dark,theme",
+        "id": "Moon",
+        "png": true,
+        "outline": true
+    },
+    "sun":
+    {
+        "name": "Sun",
+        "filled": true,
+        "svg": true,
+        "description": "*general,light,theme",
+        "id": "Sun",
+        "png": true,
+        "outline": true
+    },
+    "credit-card":
+    {
+        "name": "Credit card",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "id": "CreditCard",
+        "png": true,
+        "outline": true
+    },
+    "calendar":
+    {
+        "name": "Calendar",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "id": "Calendar",
+        "png": true,
+        "outline": true
+    },
+    "photo":
+    {
+        "name": "Photo",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "id": "Photo",
+        "png": true,
+        "outline": true
+    },
+    "point-of-sale":
+    {
+        "name": "Point of sale",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "id": "PointOfSale",
+        "png": true,
+        "outline": true
+    },
+    "bell":
+    {
+        "name": "Bell",
+        "filled": true,
+        "svg": true,
+        "description": "*general,notification",
+        "id": "Bell",
+        "png": true,
+        "outline": true
+    },
+    "invoice":
+    {
+        "name": "Invoice",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "id": "Invoice",
+        "png": true,
+        "outline": true
+    },
+    "transactions":
+    {
+        "name": "Transactions",
+        "filled": true,
+        "svg": true,
+        "description": "*general,payments",
+        "id": "Transactions",
+        "png": true,
+        "outline": true
+    },
+    "code":
+    {
+        "name": "Code",
+        "filled": true,
+        "svg": true,
+        "description": "*general,development",
+        "id": "Code",
+        "png": true,
+        "outline": true
+    },
+    "rocket":
+    {
+        "name": "Rocket",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "id": "Rocket",
+        "png": true,
+        "outline": true
+    },
+    "brush":
+    {
+        "name": "Brush",
+        "filled": true,
+        "svg": true,
+        "description": "*general,theme",
+        "id": "Brush",
+        "png": true,
+        "outline": true
+    },
+    "refresh":
+    {
+        "name": "Refresh",
+        "filled": true,
+        "svg": true,
+        "description": "*general,reload,restart",
+        "id": "Refresh",
+        "png": true,
+        "outline": true
+    },
+    "confirmations-2":
+    {
+        "name": "Confirmations 2",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Confirmations2",
+        "png": true,
+        "outline": true
+    },
+    "confirmations-3":
+    {
+        "name": "Confirmations 3",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Confirmations3",
+        "png": true,
+        "outline": true
+    },
+    "confirmations-0":
+    {
+        "name": "Confirmations 0",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Confirmations0",
+        "png": true,
+        "outline": true
+    },
+    "confirmations-1":
+    {
+        "name": "Confirmations 1",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Confirmations1",
+        "png": true,
+        "outline": true
+    },
+    "confirmations-5":
+    {
+        "name": "Confirmations 5",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Confirmations5",
+        "png": true,
+        "outline": true
+    },
+    "confirmations-6":
+    {
+        "name": "Confirmations 6",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Confirmations6",
+        "png": true,
+        "outline": true
+    },
+    "confirmations-4":
+    {
+        "name": "Confirmations 4",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Confirmations4",
+        "png": true,
+        "outline": true
+    },
+    "tag":
+    {
+        "name": "Tag",
+        "filled": true,
+        "svg": true,
+        "description": "*general,price",
+        "id": "Tag",
+        "png": true,
+        "outline": true
+    },
+    "pie-chart":
+    {
+        "name": "Pie chart",
+        "filled": true,
+        "svg": true,
+        "description": "*general,fee",
+        "id": "PieChart",
+        "png": true,
+        "outline": true
+    },
+    "coins":
+    {
+        "name": "Coins",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Coins",
+        "png": true,
+        "outline": true
+    },
+    "pantheon":
+    {
+        "name": "Pantheon",
+        "filled": true,
+        "svg": true,
+        "description": "*general,bank,account",
+        "id": "Pantheon",
+        "png": true,
+        "outline": true
+    },
+    "globe":
+    {
+        "name": "Globe",
+        "filled": true,
+        "svg": true,
+        "description": "*general,language",
+        "id": "Globe",
+        "png": true,
+        "outline": true
+    },
+    "address-book":
+    {
+        "name": "Address book",
+        "filled": true,
+        "svg": true,
+        "description": "*general",
+        "id": "AddressBook",
+        "png": true,
+        "outline": true
+    },
+    "relay":
+    {
+        "name": "Relay",
+        "filled": true,
+        "svg": true,
+        "description": "*general,tor,onion,privacy",
+        "id": "Relay",
+        "png": true,
+        "outline": true
     }
 }
