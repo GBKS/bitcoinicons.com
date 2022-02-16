@@ -1,4 +1,34 @@
 {
+    "verify":
+    {
+        "name": "Verify",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Verify",
+        "png": true,
+        "outline": true
+    },
+    "sign":
+    {
+        "name": "Sign",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "Sign",
+        "png": true,
+        "outline": true
+    },
+    "satoshi-v3":
+    {
+        "name": "Satoshi V3",
+        "filled": true,
+        "svg": true,
+        "description": "*bitcoin",
+        "id": "SatoshiV3",
+        "png": true,
+        "outline": true
+    },
     "satoshi-v2":
     {
         "name": "Satoshi V2",
