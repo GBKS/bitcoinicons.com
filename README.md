@@ -20,6 +20,8 @@ Before committing, make sure to run the site locally first and double-check that
 
 It's possible to use just npm, I prefer using [Vue UI](https://cli.vuejs.org), as it provides a visual interface for local development.
 
+Make sure to use node 15.0.0+.
+
 ## Project setup
 ```
 npm install
