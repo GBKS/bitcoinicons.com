@@ -15,7 +15,7 @@
         @setSize="setSize"
       />
       <IconGrid
-        :iconData="iconData"
+        :iconData="sortedIconData"
         :filterText="filterText"
         :styleOption="styleOption"
         :activeIcon="activeIcon"
@@ -97,6 +97,18 @@ export default {
       s.push('--theme-' + this.theme)
 
       return s.join(' ')
+    },
+
+    sortedIconData() {
+      let keys = Object.keys(this.iconData)
+      keys.sort()
+
+      const result = {}
+      for(let i=0; i<keys.length; i++) {
+        result[keys[i]] = this.iconData[keys[i]]
+      }
+
+      return result
     }
   },
 
