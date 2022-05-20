@@ -9,20 +9,20 @@
   },
   "dependencies": {
     "@bitcoin-design/bitcoin-icons-vue": "^0.1.9",
-    "core-js": "^3.6.5",
+    "core-js": "^3.22.5",
     "inter-ui": "^3.19.3",
-    "sass": "^1.39.2",
-    "sass-loader": "^10.2.0",
-    "vue": "^3.0.0"
+    "sass": "^1.52.0",
+    "sass-loader": "^13.0.0",
+    "vue": "^3.2.34"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "^5.0.0-beta.3",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/compiler-sfc": "^3.0.0",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^7.0.0"
+    "@babel/eslint-parser": "^7.17.0",
+    "@vue/cli-plugin-babel": "~5.0.4",
+    "@vue/cli-plugin-eslint": "^5.0.4",
+    "@vue/cli-service": "~5.0.4",
+    "@vue/compiler-sfc": "^3.2.34",
+    "eslint": "^8.15.0",
+    "eslint-plugin-vue": "^9.0.1"
   },
   "eslintConfig": {
     "root": true,
@@ -34,13 +34,14 @@
       "eslint:recommended"
     ],
     "parserOptions": {
-      "parser": "babel-eslint"
+      "parser": "@babel/eslint-parser"
     },
     "rules": {}
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not dead"
+    "not dead",
+    "not ie 11"
   ]
 }
