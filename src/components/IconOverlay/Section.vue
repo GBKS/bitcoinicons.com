@@ -11,6 +11,7 @@
           <button
             v-if="!isMobile && clipboardAvailable"
             :class="copyButtonClass"
+            :title="copyTitle"
             @click="clickCopy"
           >
             <CopyIconFilled />
@@ -95,6 +96,10 @@ export default {
       }
 
       return c
+    },
+
+    copyTitle() {
+      return this.copyButtonClicked ? 'Copied!' : 'Copy SVG'
     }
   },
 
