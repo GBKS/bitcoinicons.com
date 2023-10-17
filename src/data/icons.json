@@ -1138,5 +1138,104 @@
         "id": "Relay",
         "png": true,
         "outline": true
+    },
+    "podcast":
+    {
+        "name": "Podcast",
+        "filled": true,
+        "svg": true,
+        "id": "Podcast",
+        "png": true,
+        "outline": true
+    },
+    "tip-jar":
+    {
+        "name": "Tip jar",
+        "filled": true,
+        "svg": true,
+        "id": "TipJar",
+        "png": true,
+        "outline": true
+    },
+    "info-circle":
+    {
+        "name": "Info circle",
+        "filled": true,
+        "svg": true,
+        "id": "InfoCircle",
+        "png": true,
+        "outline": true
+    },
+    "question-circle":
+    {
+        "name": "Question circle",
+        "filled": true,
+        "svg": true,
+        "id": "QuestionCircle",
+        "png": true,
+        "outline": true
+    },
+    "alert-circle":
+    {
+        "name": "Alert circle",
+        "filled": true,
+        "svg": true,
+        "id": "AlertCircle",
+        "png": true,
+        "outline": true
+    },
+    "lightning-circle":
+    {
+        "name": "Lightning circle",
+        "filled": true,
+        "svg": true,
+        "id": "LightningCircle",
+        "png": true,
+        "outline": true
+    },
+    "star":
+    {
+        "name": "Star",
+        "filled": true,
+        "svg": true,
+        "id": "Star",
+        "png": true,
+        "outline": true
+    },
+    "mining-device":
+    {
+        "name": "Mining device",
+        "filled": true,
+        "svg": true,
+        "id": "MiningDevice",
+        "png": true,
+        "outline": true
+    },
+    "message":
+    {
+        "name": "Message",
+        "filled": true,
+        "svg": true,
+        "id": "Message",
+        "png": true,
+        "outline": true
+    },
+    "buoy":
+    {
+        "name": "Buoy",
+        "filled": true,
+        "svg": true,
+        "id": "Buoy",
+        "png": true,
+        "outline": true
+    },
+    "linux-terminal":
+    {
+        "name": "Linux terminal",
+        "filled": true,
+        "svg": true,
+        "id": "LinuxTerminal",
+        "png": true,
+        "outline": true
     }
 }

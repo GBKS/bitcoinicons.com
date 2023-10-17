@@ -161,7 +161,7 @@ export default {
         &.-outline {
           .wrap {
             svg {
-              color: var(--back);
+              color: var(--front);
             }
           }
         }
@@ -184,7 +184,7 @@ export default {
         &.-outline {
           .wrap {
             svg {
-              color: var(--back);
+              color: var(--front);
             }
           }
         }
@@ -192,7 +192,7 @@ export default {
         &.-filled {
           .wrap {
             svg {
-              color: var(--front);
+              color: var(--back);
             }
           }
         }

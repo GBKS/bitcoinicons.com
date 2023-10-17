@@ -137,6 +137,7 @@ export default {
   flex-wrap: wrap;
   width: 500px;
   transition: all 500ms $ease;
+  z-index: 1;
 
   @include media-query(small) {
     position: fixed;

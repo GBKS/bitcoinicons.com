@@ -4,6 +4,7 @@
     ref="canvas"
     role="button"
     :aria-pressed="isActive"
+    :title="title"
     @click="onClick"
   >
     <div class="icon">
@@ -43,6 +44,10 @@ export default {
 
     isActive() {
       return this.activeIcon && this.activeIcon.id == this.iconId;
+    },
+
+    title() {
+      return 'Click to see ' + this.iconData.name + ' icon larger and variations'
     },
 
     iconComponentName() {
