@@ -1,5 +1,5 @@
 <template>
-  <transition name="fade">
+  <transition name="fade" appear>
     <div class="icon-overlay-containers">
       <div class="icon -circle -outline">
         <div class="wrap">
@@ -77,13 +77,13 @@ export default {
   &.fade-enter-active,
   &.fade-leave-active {
     transition: all 250ms $ease;
-    transform: translate(-50%, 0);
+    // transform: translate(-50%, 0);
   }
 
   &.fade-enter,
   &.fade-leave-to {
     opacity: 0;
-    transform: translate(-50%, 15px);
+    // transform: translate(-50%, 15px);
   }
 
   .icon {
